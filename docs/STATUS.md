@@ -22,3 +22,10 @@ Snapshot: 2026-10-31.
 
 ## Next milestone
 Move from brochure MVP to a credible client-acquisition site: clearly described offers, proof/portfolio, service inquiry process, and measurable conversion.
+
+## 2026-10-31 — Search Console and SEO milestone
+- **User confirmed:** Google Search Console domain property `maxyron.com` verified by DNS TXT.
+- **User confirmed:** URL Inspection for `https://maxyron.com/` reported `Crawled - currently not indexed`, with sitemap temporary processing error and unusual referring pages. These do not prove compromise.
+- **User confirmed:** `REQUEST INDEXING` returned `Indexing requested`; Google added the URL to its priority crawl queue. **Not indexed yet.** Do not repeatedly request indexing.
+- **Repository verified:** added `app/sitemap.ts` and `app/robots.ts`, and canonical/robots metadata in `app/layout.tsx`.
+- **Pending:** confirm Vercel deploy and live `https://maxyron.com/sitemap.xml` and `/robots.txt`, submit sitemap in Search Console, monitor indexing, review homepage content and unexplained referrers. GitHub commits do not alone prove production deployment.
