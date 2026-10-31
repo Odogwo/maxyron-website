@@ -55,3 +55,8 @@ Move from brochure MVP to a credible client-acquisition site: clearly described 
 - **Research scope:** applied/academic research support, evidence reviews, data analysis, problem diagnosis and advisory reports. No unsupported qualifications, client claims, outcomes or clinical service claims added.
 - **Preserved:** service card order (AI Engineering, Intelligent Automation, Knowledge Architecture, Research & Advisory), existing visual structure and styling, brand tagline, contact email, SEO metadata and Organization schema.
 - **Pending:** verify Vercel production Ready for `f3ec3dc` or later, inspect visible mobile/desktop copy, test mailto contact, and verify email delivery. Case studies and client proof require real approved evidence before publication. Search Console indexing remains pending.
+
+## 2026-10-31 — Commercial readiness continuation
+- **Connected Vercel deployment listing verified:** commercial copy commit `f3ec3dc` and subsequent documentation commit `d9ab9d2` have **Ready** production deployment records. This confirms build/deploy success, not an independently refreshed live-page content check.
+- **Repository verified:** created `docs/SERVICE-OFFERS.md` defining client problems, potential deliverables, boundaries, engagement process, portfolio proof policy and candidate *unpublished* demonstrations for all four services.
+- **Still pending:** independently verify revised live homepage wording, inbound/outbound email and CTA functionality, Search Console indexing/sitemap submission, Vercel plan suitability for commercial use, privacy/legal identity, and publish only verified demonstrations or client-approved work.
