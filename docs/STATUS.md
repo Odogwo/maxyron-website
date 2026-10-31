@@ -41,3 +41,5 @@ Move from brochure MVP to a credible client-acquisition site: clearly described 
 - **Next:** confirm deployment, test live metadata, then improve service descriptions and credible evidence.
 
 - **User confirmed (2026-10-31):** Vercel's latest production deployment reports **Ready** after SEO Foundation v2 commits. Deployment readiness is not independent verification of live rendered metadata; next check page source for updated title and JSON-LD.
+
+- **User screenshot (2026-10-31):** live `view-source:https://maxyron.com/` still contains old `<title>MAXYRON | Engineering Intelligent Systems</title>`; the new research-inclusive title is absent. Vercel 'Ready' does not prove latest commit is served. **SEO v2 production verification FAILED / pending investigation.** Next inspect latest Production deployment's source branch and commit against SEO commits (`app/page.tsx` fix `1fc80e7`, metadata commit `5a7baa8`). Do not mark SEO v2 live until rendered HTML verified.
