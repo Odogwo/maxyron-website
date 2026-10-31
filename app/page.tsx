@@ -29,7 +29,8 @@ const approach = [
   { step: '04', name: 'Evolve', description: 'Measure results and improve what matters.' }
 ];
 export default function Home() {
-  return <main>\n    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema).replace(/</g, '\\u003c') }} />
+  return <main>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema).replace(/</g, '\\u003c') }} />
     <header className="site-header"><div className="shell nav">
       <a className="wordmark" href="#" aria-label="MAXYRON home"><span className="mark">M<span>.</span></span><span>MAXYRON</span></a>
       <nav aria-label="Main navigation"><a href="#expertise">Expertise</a><a href="#approach">Approach</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
