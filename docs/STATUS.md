@@ -60,3 +60,7 @@ Move from brochure MVP to a credible client-acquisition site: clearly described 
 - **Connected Vercel deployment listing verified:** commercial copy commit `f3ec3dc` and subsequent documentation commit `d9ab9d2` have **Ready** production deployment records. This confirms build/deploy success, not an independently refreshed live-page content check.
 - **Repository verified:** created `docs/SERVICE-OFFERS.md` defining client problems, potential deliverables, boundaries, engagement process, portfolio proof policy and candidate *unpublished* demonstrations for all four services.
 - **Still pending:** independently verify revised live homepage wording, inbound/outbound email and CTA functionality, Search Console indexing/sitemap submission, Vercel plan suitability for commercial use, privacy/legal identity, and publish only verified demonstrations or client-approved work.
+
+## 2026-10-31 — Contact email test
+- **Gmail connector verified:** sent test message from connected Gmail account to `hello@maxyron.com`, subject `MAXYRON email delivery test — 31 October 2026`; Gmail returned sent message ID `1a19288bf9a9f409` and label `SENT`.
+- **Not yet verified:** arrival in Zoho mailbox for `martins@maxyron.com`, reply delivery, alias From address, authentication headers and contact CTA behavior. Await user's Zoho inbox confirmation.
