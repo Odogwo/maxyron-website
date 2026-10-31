@@ -64,3 +64,5 @@ Move from brochure MVP to a credible client-acquisition site: clearly described 
 ## 2026-10-31 — Contact email test
 - **Gmail connector verified:** sent test message from connected Gmail account to `hello@maxyron.com`, subject `MAXYRON email delivery test — 31 October 2026`; Gmail returned sent message ID `1a19288bf9a9f409` and label `SENT`.
 - **Not yet verified:** arrival in Zoho mailbox for `martins@maxyron.com`, reply delivery, alias From address, authentication headers and contact CTA behavior. Await user's Zoho inbox confirmation.
+
+- **User confirmed (2026-10-31):** Gmail-to-`hello@maxyron.com` test message arrived in the Zoho mailbox. External inbound delivery to the public alias **verified by user**. Outbound reply from Zoho using `hello@maxyron.com`, recipient receipt, sender identity, and SPF/DKIM headers remain unverified.
