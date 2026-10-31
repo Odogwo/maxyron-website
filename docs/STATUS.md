@@ -33,3 +33,9 @@ Move from brochure MVP to a credible client-acquisition site: clearly described 
 - **User screenshot verified (2026-10-31):** live `https://maxyron.com/sitemap.xml` serves XML sitemap with homepage `https://maxyron.com/`; browser's 'no style information' message is normal. Sitemap submission in Search Console remains pending.
 
 - **User confirmed (2026-10-31):** live `https://maxyron.com/robots.txt` displays the expected crawler instructions and sitemap URL. No independent HTTP/header check recorded. Search Console sitemap submission and eventual indexing still pending.
+
+## 2026-10-31 — SEO Foundation v2 implementation
+- **Repository verified:** updated `app/layout.tsx` with research-inclusive title and description, canonical, Open Graph, and Twitter summary metadata; updated `app/page.tsx` with Schema.org Organization JSON-LD identifying Maxyron and its service areas.
+- **Scope:** no visible layout or service-card copy changes; human development remains documented as a possible future offering, not an asserted clinical service.
+- **Pending verification:** Vercel production deployment and build success, inspect rendered HTML title/meta/canonical/JSON-LD, check Search Console sitemap submission and indexing, assess social image and detailed service content.
+- **Next:** confirm deployment, test live metadata, then improve service descriptions and credible evidence.
