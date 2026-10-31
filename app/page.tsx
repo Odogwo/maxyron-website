@@ -1,3 +1,21 @@
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': 'https://maxyron.com/#organization',
+  name: 'Maxyron',
+  alternateName: 'MAXYRON',
+  url: 'https://maxyron.com/',
+  email: 'hello@maxyron.com',
+  description: 'AI engineering, intelligent automation, research and knowledge systems.',
+  knowsAbout: [
+    'AI engineering',
+    'Intelligent automation',
+    'Research and analysis',
+    'Knowledge architecture',
+    'Decision support systems'
+  ],
+};
+
 const services = [
   { number: '01', title: 'AI Engineering', detail: 'Purpose-built AI applications, agentic workflows, retrieval systems and evaluation pipelines.', tag: 'BUILD' },
   { number: '02', title: 'Intelligent Automation', detail: 'Reliable processes that connect tools, data and decisions across your operations.', tag: 'OPTIMIZE' },
@@ -11,7 +29,7 @@ const approach = [
   { step: '04', name: 'Evolve', description: 'Measure results and improve what matters.' }
 ];
 export default function Home() {
-  return <main>
+  return <main>\n    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema).replace(/</g, '\\u003c') }} />
     <header className="site-header"><div className="shell nav">
       <a className="wordmark" href="#" aria-label="MAXYRON home"><span className="mark">M<span>.</span></span><span>MAXYRON</span></a>
       <nav aria-label="Main navigation"><a href="#expertise">Expertise</a><a href="#approach">Approach</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
