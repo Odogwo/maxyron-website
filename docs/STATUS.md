@@ -39,3 +39,5 @@ Move from brochure MVP to a credible client-acquisition site: clearly described 
 - **Scope:** no visible layout or service-card copy changes; human development remains documented as a possible future offering, not an asserted clinical service.
 - **Pending verification:** Vercel production deployment and build success, inspect rendered HTML title/meta/canonical/JSON-LD, check Search Console sitemap submission and indexing, assess social image and detailed service content.
 - **Next:** confirm deployment, test live metadata, then improve service descriptions and credible evidence.
+
+- **User confirmed (2026-10-31):** Vercel's latest production deployment reports **Ready** after SEO Foundation v2 commits. Deployment readiness is not independent verification of live rendered metadata; next check page source for updated title and JSON-LD.
