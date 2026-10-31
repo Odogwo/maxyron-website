@@ -31,3 +31,5 @@ Move from brochure MVP to a credible client-acquisition site: clearly described 
 - **Pending:** confirm Vercel deploy and live `https://maxyron.com/sitemap.xml` and `/robots.txt`, submit sitemap in Search Console, monitor indexing, review homepage content and unexplained referrers. GitHub commits do not alone prove production deployment.
 
 - **User screenshot verified (2026-10-31):** live `https://maxyron.com/sitemap.xml` serves XML sitemap with homepage `https://maxyron.com/`; browser's 'no style information' message is normal. Sitemap submission in Search Console remains pending.
+
+- **User confirmed (2026-10-31):** live `https://maxyron.com/robots.txt` displays the expected crawler instructions and sitemap URL. No independent HTTP/header check recorded. Search Console sitemap submission and eventual indexing still pending.
