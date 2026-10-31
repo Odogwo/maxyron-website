@@ -29,3 +29,5 @@ Move from brochure MVP to a credible client-acquisition site: clearly described 
 - **User confirmed:** `REQUEST INDEXING` returned `Indexing requested`; Google added the URL to its priority crawl queue. **Not indexed yet.** Do not repeatedly request indexing.
 - **Repository verified:** added `app/sitemap.ts` and `app/robots.ts`, and canonical/robots metadata in `app/layout.tsx`.
 - **Pending:** confirm Vercel deploy and live `https://maxyron.com/sitemap.xml` and `/robots.txt`, submit sitemap in Search Console, monitor indexing, review homepage content and unexplained referrers. GitHub commits do not alone prove production deployment.
+
+- **User screenshot verified (2026-10-31):** live `https://maxyron.com/sitemap.xml` serves XML sitemap with homepage `https://maxyron.com/`; browser's 'no style information' message is normal. Sitemap submission in Search Console remains pending.
