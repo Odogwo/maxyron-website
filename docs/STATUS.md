@@ -72,3 +72,8 @@ Move from brochure MVP to a credible client-acquisition site: clearly described 
 - **User evidence supports:** correct public From name/address and external reply delivery to Gmail. Inbound alias receipt was already user-confirmed above.
 - **Still pending:** inspect SPF/DKIM/DMARC authentication results from Gmail original-message headers and independently test website `Discuss your project` mailto CTA on desktop/mobile.
 - **Audit:** `docs/COMMERCIAL-READINESS-AUDIT-2026-11-01.md` committed as an evidence-based audit; outstanding items remain open until tested.
+
+## 2026-11-01 — Website contact CTA user test
+- **User confirmed:** clicking the website's `Discuss your project` button opened an email composition window in their configured Workspace email application.
+- **Verified by user report:** mailto handler launched successfully in the tested environment.
+- **Still pending:** confirm the compose recipient was automatically populated as `hello@maxyron.com`; test other devices if needed; inspect authentication headers (SPF/DKIM/DMARC). No claim of a native website contact form.
