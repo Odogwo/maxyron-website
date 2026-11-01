@@ -66,3 +66,9 @@ Move from brochure MVP to a credible client-acquisition site: clearly described 
 - **Not yet verified:** arrival in Zoho mailbox for `martins@maxyron.com`, reply delivery, alias From address, authentication headers and contact CTA behavior. Await user's Zoho inbox confirmation.
 
 - **User confirmed (2026-10-31):** Gmail-to-`hello@maxyron.com` test message arrived in the Zoho mailbox. External inbound delivery to the public alias **verified by user**. Outbound reply from Zoho using `hello@maxyron.com`, recipient receipt, sender identity, and SPF/DKIM headers remain unverified.
+
+## 2026-11-01 — Outbound email reply evidence
+- **User-provided email header:** reply dated 2026-10-31 16:18:53 +0100, From `Maxyron <hello@maxyron.com>`, To Gmail address, subject `Re: MAXYRON email delivery test — 31 October 2026`. The user supplied the received reply content in conversation.
+- **User evidence supports:** correct public From name/address and external reply delivery to Gmail. Inbound alias receipt was already user-confirmed above.
+- **Still pending:** inspect SPF/DKIM/DMARC authentication results from Gmail original-message headers and independently test website `Discuss your project` mailto CTA on desktop/mobile.
+- **Audit:** `docs/COMMERCIAL-READINESS-AUDIT-2026-11-01.md` committed as an evidence-based audit; outstanding items remain open until tested.
