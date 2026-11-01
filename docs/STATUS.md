@@ -77,3 +77,9 @@ Move from brochure MVP to a credible client-acquisition site: clearly described 
 - **User confirmed:** clicking the website's `Discuss your project` button opened an email composition window in their configured Workspace email application.
 - **Verified by user report:** mailto handler launched successfully in the tested environment.
 - **Still pending:** confirm the compose recipient was automatically populated as `hello@maxyron.com`; test other devices if needed; inspect authentication headers (SPF/DKIM/DMARC). No claim of a native website contact form.
+
+## 2026-11-01 — Contact CTA recipient confirmed
+- **User confirmed:** clicking `Discuss your project` opens their Workspace email composer with `hello@maxyron.com` already populated in the To field.
+- **Basic contact workflow complete (user-verified):** website CTA launches compose window with correct recipient; incoming email received in Zoho; outbound reply reaches Gmail with From `Maxyron <hello@maxyron.com>`.
+- **Separate pending checks:** SPF/DKIM/DMARC headers, cross-device testing, and optional future lead-intake enhancements. Do not claim a website-native contact form exists.
+- **Next commercial milestone:** select and verify one independent project demonstration for publication; follow the proof policy in `docs/SERVICE-OFFERS.md`.
