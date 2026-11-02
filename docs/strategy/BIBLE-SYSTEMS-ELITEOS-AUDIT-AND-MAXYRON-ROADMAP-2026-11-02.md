@@ -78,3 +78,14 @@ A Bible reference explorer with canonical book/chapter/verse addressing, governe
 
 ## Continuity
 Start future work from this note, the BKA audit/technical debt register and Bible-OS migration records. Preserve source paths, evidence and approval state. Never claim all Bible files have been migrated or all planned capabilities are live.
+
+## GitHub repository discovery confirmation — 2026-11-02
+A connected GitHub repository-name search across the Odogwo account for **Bible, Scripture, theology, Sabbath, Christian, Truth, Faith and Church** returned one directly Bible-named standalone repository: [Odogwo/Bible-OS](https://github.com/Odogwo/Bible-OS). No additional matching repository names were returned in these searches. This is **not** proof that no Bible-related code exists in repositories with unrelated names.
+
+**Confirmed related repositories:**
+- [Odogwo/Bible-OS](https://github.com/Odogwo/Bible-OS): standalone Bible knowledge, study, theology, memory and teaching OS. Its README records the initial 42 Bible Knowledge files, 30 BKA governance files and 2 adopted mnemonic reference banks, as a preservation copy pending dependency reconciliation and cutover.
+- [Odogwo/Elite_KOS](https://github.com/Odogwo/Elite_KOS): active canonical origin for BKA governance and Bible Knowledge content until explicitly verified cutover.
+
+**Decision:** Reuse and reconcile Bible-OS, rather than creating a duplicate Bible repository. Before product integration, inspect its `AI_BOOTSTRAP.md`, `STATE.md`, `Meta-System/Migration/manifest.json` and `dependency-audit.json`; reconcile any newer Elite_KOS changes. MAXYRON's role is product discovery, presentation and integration—not a new canonical copy of the Bible knowledge corpus.
+
+**Verification boundary:** Repository existence and preservation migration are verified from GitHub; a functioning public Bible application, current synchronization, and completed canonical cutover have **not** been verified.
