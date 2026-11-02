@@ -35,3 +35,34 @@ GitHub owner repository listing returned 94 repositories. README inspection iden
 | MX-APP-007 | [Commitment-Intelligence-Assurance-System](https://github.com/Odogwo/Commitment-Intelligence-Assurance-System) | README provides name only | NEEDS INSPECTION; establish scope before registering as a public product |
 
 These candidate IDs are provisional registry IDs; **none is marked INTEGRATED or VERIFIED**. Avoid treating README aspirations as deployed functionality. Do not expose these as public MAXYRON offers without separate review.
+
+## 2026-11-02 — Elite_KOS planned-platform discovery
+
+**Sources of authority:** `Odogwo/Elite_KOS/Execution/Projects/REGISTRY - Projects.md`, `Execution/Commercial/Commercial Venture Registry/01 - REGISTER - All Commercial Ventures.md`, and `Meta-System/Repository Promotion - RPMA/REGISTER - Repository Promotions and Standalone Repositories.md`. These source registers remain authoritative for project state, venture hypotheses and repository promotion respectively. This section is a **discovery crosswalk**, not an assertion that websites are live.
+
+| Provisional ID | System / opportunity | Elite_KOS source state | MAXYRON disposition |
+|---|---|---|---|
+| MX-APP-008 | ThesisForge | Migrated project under `Execution/Systems/`; software/product for academic research | Product candidate; inspect build and hosting |
+| MX-APP-009 | Drawbridge Knowledge Platform | Active project; Stage 01 private website MVP reported | Separate-brand review; verify current site, rights and branding |
+| MX-APP-010 | Enterprise Intelligence System | RPMA RPM-0014 incubating; standalone repository planned, not verified | Strategic platform candidate; do not claim deployed |
+| MX-APP-011 | BLM Applied AI Engineering | RPMA RPM-0002 standalone programme repo; future website area | Education/programme candidate |
+| MX-APP-012 | AI Efficiency Gap Diagnostic | Active project root | Diagnostic candidate; check overlap with AI Verification Capacity Diagnostic |
+| MX-APP-013 | AI-Mediated Research Assurance System | Active project root | Research product candidate |
+| MX-APP-014 | Knowledge-to-Product Opportunity Scorer | Commercial CV-CAND-008, unvalidated | Concept candidate; verify build and commercial gates |
+| MX-APP-015 | Business Knowledge Assistant | Commercial CV-CAND-011, unvalidated | Concept candidate |
+| MX-APP-016 | Lead Recovery Assistant | Commercial CV-CAND-001, unvalidated | Concept candidate |
+| MX-APP-017 | Lead Conversion Dashboard | Commercial CV-CAND-006, unvalidated | Concept candidate |
+
+**Do not automatically register all 22 commercial ventures as websites.** Services, research ideas and unbuilt concepts belong in the commercial register until an actual web product or deliberate website plan is established. No new MAXYRON site links have been published by this discovery update.
+
+### Governance crosswalk
+- **Elite_KOS ECVS / Commercial Venture Registry:** opportunity, viability, commercial stage, priority.
+- **Elite_KOS RPMA:** repository promotion, provenance, authority and cutover.
+- **Standalone product repository:** implementation, tests, release, product evidence.
+- **MAXYRON integration registry:** MAXYRON placement, link/deployment verification, brand fit and customer-facing readiness.
+
+### Next verification queue
+1. Review ThesisForge and AI Efficiency Gap Diagnostic for working builds and duplication with existing diagnostic.
+2. Verify Drawbridge's private MVP and determine whether to link, retain as independent brand or withhold.
+3. Reconcile BLM and EIS planned website scope before any public listing.
+4. Evaluate the remaining concept candidates only when they are selected for development.
