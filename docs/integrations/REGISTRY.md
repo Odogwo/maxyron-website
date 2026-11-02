@@ -81,3 +81,11 @@ These candidate IDs are provisional registry IDs; **none is marked INTEGRATED or
 | MX-APP-023 | Integrated Learning, Memory & Cross-Disciplinary Architecture | Elite_KOS `Ideas/IDEA-0008 - 20 - DEVELOPMENT - Integrated Learning, Memory and Cross-Disciplinary Architecture.md` | SHARED CAPABILITY CANDIDATE; not necessarily a website |
 
 **Identity guardrail:** These candidates belong under a possible **Learning & Mastery Systems** product family. MAXYRON remains positioned as an intelligent systems engineering and research company, not an academy. Do not infer product readiness or learner mastery from canonical notes.
+
+## 2026-11-02 — SEKA research architecture candidate
+
+| Provisional ID | Project | Repository | Verified state | Proposed MAXYRON classification | Integration status |
+|---|---|---|---|---|---|
+| MX-APP-024 | SEKA — Source Evidence and Knowledge Architecture | [Odogwo/SEKA](https://github.com/Odogwo/SEKA) | README verified: documented source-grounded research protocols and NESTLE pilot; **not yet a standalone software application** | Research Products / Knowledge Platforms; future evidence-processing application candidate | CANDIDATE — no MAXYRON website link or deployed SEKA app verified |
+
+SEKA's NESTLE pilot demonstrates a research workflow, not proof of a finished product or completed research verification. Keep SEKA's own project registry and evidence provenance authoritative. Any future MAXYRON product page must distinguish documented architecture, working software, deployment and verified outputs.
