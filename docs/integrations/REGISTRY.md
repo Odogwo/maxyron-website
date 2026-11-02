@@ -66,3 +66,18 @@ These candidate IDs are provisional registry IDs; **none is marked INTEGRATED or
 2. Verify Drawbridge's private MVP and determine whether to link, retain as independent brand or withhold.
 3. Reconcile BLM and EIS planned website scope before any public listing.
 4. Evaluate the remaining concept candidates only when they are selected for development.
+
+## 2026-11-02 — Elite_KOS learning and mastery platform candidates
+
+**Status: discovery only — not deployed or approved for public integration.** Strategic treatment and authority boundaries: [MAXYRON organization, product and mastery architecture](../strategy/MAXYRON-ORGANIZATION-PRODUCT-AND-MASTERY-ARCHITECTURE.md).
+
+| Provisional ID | Candidate | Canonical source | Integration state |
+|---|---|---|---|
+| MX-APP-018 | AI Mastery | Elite_KOS `Execution/Learning/AIM - 05 - README - AI Mastery.md` | CANDIDATE |
+| MX-APP-019 | Bible Knowledge & Memory Mastery | Elite_KOS `Bible Knowledge/PROGRAMME - Bible Memory Mastery.md` | CANDIDATE |
+| MX-APP-020 | Vocabulary Intelligence & Mastery | Elite_KOS `Capabilities/Vocabulary/README.md` | CANDIDATE |
+| MX-APP-021 | Learning Science Mastery | Elite_KOS `Execution/Learning Science Mastery/README - Learning Science Mastery.md` | CANDIDATE |
+| MX-APP-022 | Mathematics & Physics Mastery Laboratory | Elite_KOS `Execution/Projects/Mathematics and Physics Mastery Laboratory/PROJECT - Mathematics and Physics Mastery Laboratory.md` | CANDIDATE |
+| MX-APP-023 | Integrated Learning, Memory & Cross-Disciplinary Architecture | Elite_KOS `Ideas/IDEA-0008 - 20 - DEVELOPMENT - Integrated Learning, Memory and Cross-Disciplinary Architecture.md` | SHARED CAPABILITY CANDIDATE; not necessarily a website |
+
+**Identity guardrail:** These candidates belong under a possible **Learning & Mastery Systems** product family. MAXYRON remains positioned as an intelligent systems engineering and research company, not an academy. Do not infer product readiness or learner mastery from canonical notes.
