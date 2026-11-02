@@ -22,3 +22,16 @@ ID; application name; business purpose; product owner; GitHub repository; produc
 1. Decide which websites are public MAXYRON demonstrations, independent brands, internal tools or client-specific deployments.
 2. Decide whether future apps should be linked from a dedicated MAXYRON **Products & Demonstrations** page rather than expanding the homepage indefinitely.
 3. Decide naming conventions for eventual subdomains; do not configure DNS without a reason and deployment plan.
+
+## 2026-11-02 — GitHub candidate discovery (not integrated)
+GitHub owner repository listing returned 94 repositories. README inspection identified the following **candidates**, not verified public deployments or approved integrations:
+
+| Candidate | Repository | Evidence from README | Classification / next check |
+|---|---|---|---|
+| MX-APP-003 | [kemas-learning-system](https://github.com/Odogwo/kemas-learning-system) | Python local web application for knowledge extraction and mastery; production deployment explicitly not implemented | DEVELOPMENT CANDIDATE; assess product maturity and hosting before integration |
+| MX-APP-004 | [commitment-experiment-system](https://github.com/Odogwo/commitment-experiment-system) | Standalone commitment experiment product; MVP tracker/web app described as intended component | DEVELOPMENT CANDIDATE; verify implemented app and deployment |
+| MX-APP-005 | [maxyron-ai-hub](https://github.com/Odogwo/maxyron-ai-hub) | Canonical AI knowledge, engineering and commercial platform architecture | STRATEGIC PLATFORM; determine whether a public website exists or is intended |
+| MX-APP-006 | [thesisSoftware](https://github.com/Odogwo/thesisSoftware) | README identifies thesis software app without implementation evidence | NEEDS INSPECTION; determine ownership, code maturity and integration relevance |
+| MX-APP-007 | [Commitment-Intelligence-Assurance-System](https://github.com/Odogwo/Commitment-Intelligence-Assurance-System) | README provides name only | NEEDS INSPECTION; establish scope before registering as a public product |
+
+These candidate IDs are provisional registry IDs; **none is marked INTEGRATED or VERIFIED**. Avoid treating README aspirations as deployed functionality. Do not expose these as public MAXYRON offers without separate review.
