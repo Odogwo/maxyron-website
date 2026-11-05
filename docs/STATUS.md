@@ -91,6 +91,17 @@ Move from brochure MVP to a credible client-acquisition site: clearly described 
 
 - **Repository commits completed:** Added `app/services/page.tsx` with four existing service categories in their original order and grounded descriptions of client problems, possible deliverables and boundaries; added responsive `app/services/services.css`; linked `/services` from the homepage navigation, expertise section and footer.
 - **Scope preserved:** no new service category, no Products/Learning/Research route, no claim of completed projects or qualifications. Research & Advisory remains a client-facing service distinct from broader Research & Knowledge.
-- **Repository source verification:** pending final readback in this session; commit success alone does not establish build or live website availability.
+- **Repository source verification:** Stage 1 page, styling, homepage changes and blueprint read back from GitHub on 2026-11-05; this does not establish build or live website availability.
 - **Build and production verification:** NOT YET DONE. Run `npm install` and `npm run build`; test desktop/mobile; verify Vercel deployment points at the committed branch/commit; inspect `https://maxyron.com/services` and enquiry links.
 - **Next:** verify Stage 1 build/deployment and then plan a maturity-labelled Products catalogue.
+
+
+## 2026-11-05 — Website Stage 2: Products catalogue (repository implementation)
+
+- **Architecture authority:** `docs/strategy/CURRENT-RECONCILED-ARCHITECTURE.md`.
+- **Blueprint:** `docs/implementation/WEBSITE-STAGE-2-PRODUCTS-BLUEPRINT.md`.
+- **Repository implementation:** New `app/products/page.tsx` and `app/products/products.css`; navigation links to Products from homepage and Services page.
+- **Public content scope:** AI Verification Capacity Diagnostic is identified as an interactive *self-reported* demonstration, not an audit/certification. SEKA and KEMAS appear as development/evaluation entries; Psychology Knowledge Mastery as a portfolio integration candidate. No unsupported public URLs or readiness claims added.
+- **Repository verification:** file readback to be performed after commits.
+- **Production/build status:** **NOT VERIFIED**. Direct public website retrieval was unsuccessful in this session; this is not proof of a deployment failure. `npm run build`, Vercel production commit, visual desktop/mobile and contact link tests are pending.
+- **Next milestone:** verify deployed Stage 1/2; then inventory and reconcile learning/mastery product authorities before building a Learning page.
