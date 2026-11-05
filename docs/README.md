@@ -2,7 +2,7 @@
 Last documented: 2026-10-31. This is the project's recovery entry point, independent of chat history.
 
 ## Start here
-0. **[Strategic architecture v2 — organizational identity, services, products, knowledge and mastery](strategy/MAXYRON-ORGANIZATIONAL-ARCHITECTURE-V2-2026-11-05.md)** — current proposed future pattern (not live website implementation). For strategy continuity, start here; for operational status, start with STATUS.md.
+0. **[CURRENT RECONCILED ARCHITECTURE — R1](strategy/CURRENT-RECONCILED-ARCHITECTURE.md)** — single current working authority for MAXYRON identity, service/product/knowledge/learning classification, subject ownership and present-vs-future website structure. For future reconciliations, follow [strategy index](strategy/README.md). The website implementation and deployment status remain separately governed by ARCHITECTURE.md and STATUS.md.
 1. [Current status and next actions](STATUS.md)
 2. [System architecture](ARCHITECTURE.md)
 3. [Infrastructure and DNS](INFRASTRUCTURE.md)
