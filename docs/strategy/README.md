@@ -2,12 +2,20 @@
 
 These notes preserve MAXYRON's organizational identity, proposed product architecture and key design decisions independently of ChatGPT conversation history.
 
-## Start here — current strategic interpretation
+## CURRENT — one reconciled authority
 
-1. **[MAXYRON Organizational Architecture v2 — Services, Products, Knowledge & Mastery](MAXYRON-ORGANIZATIONAL-ARCHITECTURE-V2-2026-11-05.md)** (2026-11-05): current strategic clarification, the organizational identity/content distinction, the four functions, domain and spiritual platform boundaries, future direction and update history. **Read this first** when asked for MAXYRON's overall pattern.
-2. [Organization, Product Portfolio & Mastery Systems Architecture — v1 proposal](MAXYRON-ORGANIZATION-PRODUCT-AND-MASTERY-ARCHITECTURE.md) (2026-11-02): original parent identity, four existing services, proposed product families, shared mastery capabilities and evidence-based hybrid integration.
-3. [Website's current implemented architecture](../ARCHITECTURE.md) and [Integration Registry](../integrations/REGISTRY.md): check reality against aspirations.
+**[MAXYRON Current Reconciled Architecture — R1](CURRENT-RECONCILED-ARCHITECTURE.md)** (2026-11-05) is the **current working strategic authority for portfolio classification and the next website build**. It reconciles the previous versions, provides one placement table for subjects, services, products, learning/mastery and research, and distinguishes **what is implemented NOW** from **proposed NEXT** and **conditional LATER**. **Read this first** for questions about what MAXYRON is, where any activity belongs, and how to structure the site.
 
-**Core distinction:** MAXYRON is an intelligent systems engineering, research and knowledge-systems **organization**, not a general-purpose content website or an academy by default. Fields of human learning may supply knowledge, but services, products, knowledge/research, and learning/mastery must each have a defined purpose, owner and maturity label.
+## Historical architecture — retained for provenance
 
-**Governance:** A recorded recommendation is not a published product, approved rebrand, deployment or verified integration. Refer to `docs/ARCHITECTURE.md` for current website implementation and `docs/integrations/REGISTRY.md` for the integration portfolio. Preserve versioned history rather than silently replacing prior decisions.
+1. [v1 — Organization, Product Portfolio & Mastery Systems Architecture](MAXYRON-ORGANIZATION-PRODUCT-AND-MASTERY-ARCHITECTURE.md) (2026-11-02): original parent identity, existing four services, proposed product families and shared mastery principles.
+2. [v2 — Organizational Architecture: Services, Products, Knowledge & Mastery](MAXYRON-ORGANIZATIONAL-ARCHITECTURE-V2-2026-11-05.md) (2026-11-05): broad subject reach without content sprawl, four organizational functions and spiritual platform classification.
+3. [Implemented website architecture](../ARCHITECTURE.md), [current operational status](../STATUS.md), [service offers](../SERVICE-OFFERS.md) and [integration register](../integrations/REGISTRY.md): evidence for current implementation and actual readiness.
+
+## Future reconciliation rule
+
+Each new strategy version v3/v4 must be compared to the CURRENT reconciled authority, and when approved a new R2/R3 reconciled architecture becomes the **one active reference**. Preserve prior versions and the change rationale. Update this index to point first to the latest reconciled authority; do not create multiple simultaneously active and contradictory architecture documents.
+
+**Identity rule:** MAXYRON is an intelligent systems engineering and research **organization**, not a general-purpose content website or an academy by default. Its public four services remain AI Engineering, Intelligent Automation, Knowledge Architecture, and Research & Advisory. The four cross-cutting organizational functions (Services, Products, Learning & Mastery, Knowledge & Research) are not the same as the four service offerings.
+
+**Governance:** A recorded recommendation is not a published product, approved rebrand, deployment or verified integration. Check source, live behavior and the portfolio registry before any public claim.
