@@ -83,3 +83,14 @@ Move from brochure MVP to a credible client-acquisition site: clearly described 
 - **Basic contact workflow complete (user-verified):** website CTA launches compose window with correct recipient; incoming email received in Zoho; outbound reply reaches Gmail with From `Maxyron <hello@maxyron.com>`.
 - **Separate pending checks:** SPF/DKIM/DMARC headers, cross-device testing, and optional future lead-intake enhancements. Do not claim a website-native contact form exists.
 - **Next commercial milestone:** select and verify one independent project demonstration for publication; follow the proof policy in `docs/SERVICE-OFFERS.md`.
+
+
+## 2026-11-05 — Website Stage 1: dedicated Services route (repository implementation)
+
+**Strategic authority:** `docs/strategy/CURRENT-RECONCILED-ARCHITECTURE.md` (R1). **Implementation blueprint:** `docs/implementation/WEBSITE-STAGE-1-BLUEPRINT.md`.
+
+- **Repository commits completed:** Added `app/services/page.tsx` with four existing service categories in their original order and grounded descriptions of client problems, possible deliverables and boundaries; added responsive `app/services/services.css`; linked `/services` from the homepage navigation, expertise section and footer.
+- **Scope preserved:** no new service category, no Products/Learning/Research route, no claim of completed projects or qualifications. Research & Advisory remains a client-facing service distinct from broader Research & Knowledge.
+- **Repository source verification:** pending final readback in this session; commit success alone does not establish build or live website availability.
+- **Build and production verification:** NOT YET DONE. Run `npm install` and `npm run build`; test desktop/mobile; verify Vercel deployment points at the committed branch/commit; inspect `https://maxyron.com/services` and enquiry links.
+- **Next:** verify Stage 1 build/deployment and then plan a maturity-labelled Products catalogue.
