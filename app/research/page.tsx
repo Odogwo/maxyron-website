@@ -34,8 +34,8 @@ export default function ResearchPage() {
   return <main>
     <header className="site-header"><div className="shell nav">
       <a className="wordmark" href="/" aria-label="MAXYRON home"><span className="mark">M<span>.</span></span><span>MAXYRON</span></a>
-      <nav aria-label="Main navigation"><a href="/">Home</a><a href="/services">Services</a><a href="/products">Products</a><a href="/learning">Learning</a><a href="/research" aria-current="page">Research</a><a href="/#contact">Contact</a></nav>
-      <a className="nav-cta" href="/#contact">Start a conversation <span aria-hidden="true">↗</span></a>
+      <nav aria-label="Main navigation"><a href="/">Home</a><a href="/services">Services</a><a href="/products">Products</a><a href="/learning">Learning</a><a href="/research" aria-current="page">Research</a><a href="mailto:hello@maxyron.com?subject=MAXYRON%20enquiry">Contact</a></nav>
+      <a className="nav-cta" href="mailto:hello@maxyron.com?subject=MAXYRON%20enquiry">Start a conversation <span aria-hidden="true">↗</span></a>
     </div></header>
 
     <section className="research-hero"><div className="shell">
@@ -72,6 +72,6 @@ export default function ResearchPage() {
     </div></section>
 
     <section className="contact-section"><div className="shell contact-inner"><div><p className="eyebrow">LET'S CONNECT</p><h2>Bring a difficult<br/>question to light<span className="period">.</span></h2><p>Share the question, evidence or knowledge problem you are working through and the outcome you need.</p></div><a className="button light" href="mailto:hello@maxyron.com?subject=MAXYRON%20research%20enquiry">Discuss your question <span aria-hidden="true">↗</span></a></div></section>
-    <footer className="footer"><div className="shell footer-top"><div><a className="wordmark" href="/"><span className="mark">M<span>.</span></span><span>MAXYRON</span></a><p>Engineering Intelligent Systems.</p></div><div className="footer-links"><a href="/">Home</a><a href="/services">Services</a><a href="/products">Products</a><a href="/learning">Learning</a><a href="/research">Research</a><a href="/#contact">Contact</a></div></div><div className="shell footer-bottom"><span>© {new Date().getFullYear()} MAXYRON. All rights reserved.</span><span>THINK CLEARLY. BUILD BOLDLY.</span></div></footer>
+    <footer className="footer"><div className="shell footer-top"><div><a className="wordmark" href="/"><span className="mark">M<span>.</span></span><span>MAXYRON</span></a><p>Engineering Intelligent Systems.</p></div><div className="footer-links"><a href="/">Home</a><a href="/services">Services</a><a href="/products">Products</a><a href="/learning">Learning</a><a href="/research">Research</a><a href="mailto:hello@maxyron.com?subject=MAXYRON%20enquiry">Contact</a></div></div><div className="shell footer-bottom"><span>© {new Date().getFullYear()} MAXYRON. All rights reserved.</span><span>THINK CLEARLY. BUILD BOLDLY.</span></div></footer>
   </main>;
 }
