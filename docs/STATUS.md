@@ -182,3 +182,8 @@ Move from brochure MVP to a credible client-acquisition site: clearly described 
 - **Automated guard:** `scripts/verify-site-structure.mjs` checks all five main navigation blocks for direct mailto destination and absence of Contact-section anchors.
 - **Verification:** Source readback and Vercel commit-status inspection to be recorded separately; browser/user confirmation for this new behavior pending.
 - **Reasoning:** A direct enquiry action reduces friction while retaining a readable contact section for visitors who scroll.
+
+
+## 2026-11-06 — Cross-workstream design preservation
+
+Created `docs/strategy/CROSS-WORKSTREAM-DESIGN-AND-CONTINUITY-MAP-2026-11-06.md` and linked it from the strategy and recovery indexes. The map preserves corporate MAXYRON development, computer science/engineering infrastructure, spirituality and canonical article evolution, and AI/learning mastery. R1 remains the sole current strategic authority. Repository ownership, implementation evidence, unresolved migrations, the unverified spiritual repository, and next steps are recorded in the new map. No deployment or domain migration is implied by saving the document.
