@@ -50,7 +50,7 @@ export default function ServicesPage() {
   return <main>
     <header className="site-header"><div className="shell nav">
       <a className="wordmark" href="/" aria-label="MAXYRON home"><span className="mark">M<span>.</span></span><span>MAXYRON</span></a>
-      <nav aria-label="Main navigation"><a href="/">Home</a><a href="/services" aria-current="page">Services</a><a href="/products">Products</a><a href="/#approach">Approach</a><a href="/#about">About</a><a href="/#contact">Contact</a></nav>
+      <nav aria-label="Main navigation"><a href="/">Home</a><a href="/services" aria-current="page">Services</a><a href="/products">Products</a><a href="/learning">Learning</a><a href="/#approach">Approach</a><a href="/#about">About</a><a href="/#contact">Contact</a></nav>
       <a className="nav-cta" href="/#contact">Start a conversation <span aria-hidden="true">↗</span></a>
     </div></header>
 
