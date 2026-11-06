@@ -6,6 +6,10 @@ These notes preserve MAXYRON's organizational identity, proposed product archite
 
 **[MAXYRON Current Reconciled Architecture — R1](CURRENT-RECONCILED-ARCHITECTURE.md)** (2026-11-05) is the **current working strategic authority for portfolio classification and the next website build**. It reconciles the previous versions, provides one placement table for subjects, services, products, learning/mastery and research, and distinguishes **what is implemented NOW** from **proposed NEXT** and **conditional LATER**. **Read this first** for questions about what MAXYRON is, where any activity belongs, and how to structure the site.
 
+## Cross-workstream continuity map
+
+- **[MAXYRON / Engineering / Spirituality / AI & Mastery — Cross-Workstream Design and Continuity Map (2026-11-06)](CROSS-WORKSTREAM-DESIGN-AND-CONTINUITY-MAP-2026-11-06.md):** reconciles the distinct workstreams, design reasoning, canonical ownership, spiritual article evolution protocol, computer science/infrastructure division, implemented versus proposed features, repository status and next gates. This is a **continuity cross-reference**, not a new R2; R1 remains authoritative.
+
 ## Current assessment awaiting next reconciliation
 
 - **[MAXYRON Development Record — Computer Science, Shared Infrastructure and Cross-Disciplinary Learning (2026-11-06)](ASSESSMENT-SHARED-ENGINEERING-INFRASTRUCTURE-2026-11-06.md):** full origin, alternative classifications, user clarification, disciplined three-role model (learning discipline / operational infrastructure / products), reusable learning and mastery progression, implementation examples, evidence boundaries, repository ownership, migration safeguards and next actions. **Current recommendation:** Linux web-server build is Computer Science/Systems Engineering learning, while ELAB-N01 is operational MAXYRON shared infrastructure. Previous broader cross-domain assessment is preserved as an appendix. This is not a competing active strategy, a new repo or a published feature; R1 remains authoritative.
