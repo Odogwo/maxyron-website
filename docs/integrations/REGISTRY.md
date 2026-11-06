@@ -99,3 +99,7 @@ SEKA's NESTLE pilot demonstrates a research workflow, not proof of a finished pr
 - **Evidence:** updated `index.html` fetched back and checked for both destinations and `no-print` class. GitHub commit status **Vercel: success** for the above SHA, target `https://vercel.com/odogwos-projects/maxyron-ai-verification/4byuH1ud8JqctDJMhSntnjTbN4Xj`.
 - **Separate pending check:** independently inspect rendered diagnostic URL on desktop/mobile, confirm return navigation from the questionnaire and results view, and confirm printing still omits the links. Successful deployment status alone does not prove each interaction.
 - **Authority:** `Odogwo/maxyron-website` governs parent portfolio placement; the diagnostic application repository owns its interface and functional changes. Do not duplicate its code in the corporate repository.
+
+### 2026-11-06 — MX-APP-001 user acceptance
+
+The user confirmed that the **Back to MAXYRON Products** link works on the deployed AI Verification Diagnostic. This closes the reported return-navigation defect (user-tested). The diagnostic's own `README.md` now records this acceptance. Outstanding, distinct checks are mobile layout, keyboard behavior and print preview. The link remains to `https://maxyron.com/products`, with a separate Home link to `https://maxyron.com/`. Do not infer other product integrations are verified.
