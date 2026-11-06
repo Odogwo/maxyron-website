@@ -103,3 +103,11 @@ SEKA's NESTLE pilot demonstrates a research workflow, not proof of a finished pr
 ### 2026-11-06 — MX-APP-001 user acceptance
 
 The user confirmed that the **Back to MAXYRON Products** link works on the deployed AI Verification Diagnostic. This closes the reported return-navigation defect (user-tested). The diagnostic's own `README.md` now records this acceptance. Outstanding, distinct checks are mobile layout, keyboard behavior and print preview. The link remains to `https://maxyron.com/products`, with a separate Home link to `https://maxyron.com/`. Do not infer other product integrations are verified.
+
+## 2026-11-06 — MX-APP-024 SEKA source audit
+
+[Read SEKA integration readiness audit](SEKA-INTEGRATION-READINESS-AUDIT-2026-11-06.md).
+
+- Source inspection identified an actual `apps/web` Next.js project dashboard and `apps/api` authenticated FastAPI project/governance routes in `Odogwo/SEKA`. The root README's earlier “not yet a standalone software application” statement is out of date relative to the source tree and requires owner reconciliation.
+- **Not established:** production URL/commit, intended public access, end-to-end runtime, sensitive-project exposure controls, and return-to-MAXYRON navigation. No new public external link was added.
+- Keep SEKA **under development / integration candidate** in the Products catalogue until all gates pass. An implemented source route is not evidence of a production-ready autonomous scholarly research agent.
