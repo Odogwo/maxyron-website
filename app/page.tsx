@@ -33,7 +33,7 @@ export default function Home() {
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema).replace(/</g, '\\u003c') }} />
     <header className="site-header"><div className="shell nav">
       <a className="wordmark" href="#" aria-label="MAXYRON home"><span className="mark">M<span>.</span></span><span>MAXYRON</span></a>
-      <nav aria-label="Main navigation"><a href="/services">Services</a><a href="/products">Products</a><a href="#expertise">Expertise</a><a href="#approach">Approach</a><a href="#diagnostic">Diagnostic</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+      <nav aria-label="Main navigation"><a href="/services">Services</a><a href="/products">Products</a><a href="/learning">Learning</a><a href="#expertise">Expertise</a><a href="#approach">Approach</a><a href="#diagnostic">Diagnostic</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
       <a className="nav-cta" href="#contact">Start a conversation <span aria-hidden="true">↗</span></a>
     </div></header>
     <section className="hero shell">
