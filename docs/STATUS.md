@@ -131,3 +131,14 @@ Move from brochure MVP to a credible client-acquisition site: clearly described 
 - **Independent build attempted:** model container has Node 22 and npm 10, but `git clone https://github.com/Odogwo/maxyron-website.git` failed with `Could not resolve host: github.com`. Therefore **no npm install/build was performed** and no passing build is claimed.
 - **Status:** GitHub repository implementation committed; production build and live deployment **UNVERIFIED**.
 - **Next priority (engineering gate before further website expansion):** obtain a successful Next.js build and verify Vercel commit/production for `/`, `/services`, `/products`, `/learning`, `/research`, and sitemap. Review mobile navigation and enquiry links. Update this status with actual build output and deployed commit.
+
+
+## 2026-11-06 — Verification gate: deployment evidence and independent CI
+
+- **GitHub commit `8b6c18ea4ec60f9589c3ef09f21b2ade51508174`** (Stage 4 status update) returned a GitHub combined-status context of **Vercel: success**, pointing to `https://vercel.com/odogwos-projects/maxyron-website/9FMDLths1CuuPLATLLk4kznqxJBD`. This provides evidence of a successful Vercel status for that commit, **not independent browser confirmation of each page**.
+- **Live public route checks** for homepage, `/services`, `/products`, `/learning`, `/research`, and `/sitemap.xml` returned tool-access errors in the browsing environment. No assertion of a 404, outage, visible page or fully working route is supported by these checks.
+- **Independent CI created:** `.github/workflows/website-ci.yml`, configured for pushes, pull requests and manual dispatch to install dependencies, run `npm run build`, and execute `node scripts/verify-site-structure.mjs`.
+- **Static structural test added:** `scripts/verify-site-structure.mjs` checks five page sources, route-to-route navigation, each route's stylesheet, sitemap declarations and the four established client service names.
+- **CI caveat:** the available GitHub workflow-run retrieval API filters to PR-triggered runs and cannot serve as proof of success for this push; no passing independent CI result has yet been observed.
+- **Latest status check:** GitHub reported Vercel **pending** for commit `0cc6d9060f38a596a5a6fbcdd76743d94f82ecc8`, the latest test-script change, when checked. Do not infer success before confirmed.
+- **Current gate:** await/check an actual successful independent CI/build run and verify Vercel's deployed commit + live route behaviour in a browser. Confirm nav, sitemap, responsive rendering and contact links before further feature additions.
