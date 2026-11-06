@@ -6,6 +6,10 @@ These notes preserve MAXYRON's organizational identity, proposed product archite
 
 **[MAXYRON Current Reconciled Architecture — R1](CURRENT-RECONCILED-ARCHITECTURE.md)** (2026-11-05) is the **current working strategic authority for portfolio classification and the next website build**. It reconciles the previous versions, provides one placement table for subjects, services, products, learning/mastery and research, and distinguishes **what is implemented NOW** from **proposed NEXT** and **conditional LATER**. **Read this first** for questions about what MAXYRON is, where any activity belongs, and how to structure the site.
 
+## Current assessment awaiting next reconciliation
+
+- [Shared Engineering Infrastructure and Cross-Disciplinary Mastery — Placement Assessment (2026-11-06)](ASSESSMENT-SHARED-ENGINEERING-INFRASTRUCTURE-2026-11-06.md): documents recommended cross-functional ownership of Elite Lab Node 01, subject-domain reuse, and non-destructive integration. This is **not** a second active strategy, R2 approval, new public service, or deployed feature. R1 remains the current authority.
+
 ## Historical architecture — retained for provenance
 
 1. [v1 — Organization, Product Portfolio & Mastery Systems Architecture](MAXYRON-ORGANIZATION-PRODUCT-AND-MASTERY-ARCHITECTURE.md) (2026-11-02): original parent identity, existing four services, proposed product families and shared mastery principles.
