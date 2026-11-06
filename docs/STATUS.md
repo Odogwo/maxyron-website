@@ -187,3 +187,8 @@ Move from brochure MVP to a credible client-acquisition site: clearly described 
 ## 2026-11-06 — Cross-workstream design preservation
 
 Created `docs/strategy/CROSS-WORKSTREAM-DESIGN-AND-CONTINUITY-MAP-2026-11-06.md` and linked it from the strategy and recovery indexes. The map preserves corporate MAXYRON development, computer science/engineering infrastructure, spirituality and canonical article evolution, and AI/learning mastery. R1 remains the sole current strategic authority. Repository ownership, implementation evidence, unresolved migrations, the unverified spiritual repository, and next steps are recorded in the new map. No deployment or domain migration is implied by saving the document.
+
+
+## 2026-11-06 — Spirituality knowledge repository design decision
+
+This conversation is designated for spirituality, philosophy and human reflection work. Plan saved at `docs/strategy/SPIRITUAL-KNOWLEDGE-REPOSITORY-AND-MAXYRON-PUBLISHING-PLAN-2026-11-06.md`. The recommended architecture is a separate initially private article/source/version-history repository that feeds approved publications into MAXYRON Research & Knowledge, not a duplicate Bible-OS or an immediately independent spiritual website. The target `Odogwo/maxyron-spiritual-consciousness` repo is **not yet created/verified** because available GitHub actions cannot create repositories. Public website integration remains a future approval and build step.
