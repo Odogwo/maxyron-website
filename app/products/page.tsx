@@ -32,7 +32,7 @@ export default function ProductsPage() {
   return <main>
     <header className="site-header"><div className="shell nav">
       <a className="wordmark" href="/" aria-label="MAXYRON home"><span className="mark">M<span>.</span></span><span>MAXYRON</span></a>
-      <nav aria-label="Main navigation"><a href="/">Home</a><a href="/services">Services</a><a href="/products" aria-current="page">Products</a><a href="/learning">Learning</a><a href="/#about">About</a><a href="/#contact">Contact</a></nav>
+      <nav aria-label="Main navigation"><a href="/">Home</a><a href="/services">Services</a><a href="/products" aria-current="page">Products</a><a href="/learning">Learning</a><a href="/research">Research</a><a href="/#about">About</a><a href="/#contact">Contact</a></nav>
       <a className="nav-cta" href="/#contact">Start a conversation <span aria-hidden="true">↗</span></a>
     </div></header>
     <section className="products-hero"><div className="shell">
