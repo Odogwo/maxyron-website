@@ -3,13 +3,14 @@ Last documented: 2026-10-31. This is the project's recovery entry point, indepen
 
 ## Start here
 0. **[CURRENT RECONCILED ARCHITECTURE — R1](strategy/CURRENT-RECONCILED-ARCHITECTURE.md)** — single current working authority for MAXYRON identity, service/product/knowledge/learning classification, subject ownership and present-vs-future website structure. For future reconciliations, follow [strategy index](strategy/README.md). The website implementation and deployment status remain separately governed by ARCHITECTURE.md and STATUS.md.
-1. [Current status and next actions](STATUS.md)
-2. [System architecture](ARCHITECTURE.md)
-3. [Infrastructure and DNS](INFRASTRUCTURE.md)
-4. [Brand and business decisions](BRAND-DECISIONS.md)
-5. [Development and operating procedures](OPERATIONS.md)
-6. [History and decision log](HISTORY.md)
-7. [Service offers and engagement framework](SERVICE-OFFERS.md)
+1. **[MAXYRON development ideas and refinements](strategy/README.md)** — read the current R1, dated development records, earlier versions and outstanding architecture choices; the [ELAB-N01 Computer Science/infrastructure distinction](strategy/ASSESSMENT-SHARED-ENGINEERING-INFRASTRUCTURE-2026-11-06.md) is preserved here.
+2. [Current status and next actions](STATUS.md)
+3. [System architecture](ARCHITECTURE.md)
+4. [Infrastructure and DNS](INFRASTRUCTURE.md)
+5. [Brand and business decisions](BRAND-DECISIONS.md)
+6. [Development and operating procedures](OPERATIONS.md)
+7. [History and decision log](HISTORY.md)
+8. [Service offers and engagement framework](SERVICE-OFFERS.md)
 
 ## Evidence policy
 - **Repository verified** = directly inspected in GitHub.
