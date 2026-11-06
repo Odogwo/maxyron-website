@@ -163,3 +163,12 @@ Move from brochure MVP to a credible client-acquisition site: clearly described 
 - **Full detail:** `docs/integrations/REGISTRY.md` (MX-APP-001).
 - **Pending user/browser confirmation:** reload diagnostic URL and click return link from initial screen and completed report; confirm mobile layout and print preview. This is distinct from Vercel success and source verification.
 - **Next gate:** review independent CI build status and continue approved portfolio integration only after evidence, without inventing product readiness.
+
+
+## 2026-11-06 — Return-link accepted; SEKA product integration evidence audit
+
+- **User acceptance:** all MAXYRON corporate routes open, layout and contact work; user independently confirmed that the **AI Verification Diagnostic → Back to MAXYRON Products** return navigation works. This resolves the reported link defect. Evidence also recorded in `Odogwo/ai-verification-capacity-diagnostic/README.md` and `docs/integrations/REGISTRY.md`.
+- **Integration source audit:** Created `docs/integrations/SEKA-INTEGRATION-READINESS-AUDIT-2026-11-06.md`. Current `Odogwo/SEKA` code has Next.js `apps/web` and authenticated FastAPI `apps/api` routes, more advanced than its older root README description. This evidence is **code only**, not verified production behavior.
+- **Decision:** Keep SEKA in the MAXYRON product development catalogue as an **integration candidate**; do not expose direct app link until live access, auth/privacy, reciprocal navigation, product-owner permissions and maturity claims are checked. No new public MAXYRON website code was changed by this audit.
+- **Build validation:** Independent GitHub Actions build status is still unconfirmed by available connector run retrieval. Earlier successful Vercel status and user site test are separately evidenced; do not treat either as GitHub Actions CI success.
+- **Next smallest step:** inspect SEKA's own up-to-date handoff/deployment and verify a safe public landing route before reciprocal integration. Keep all secret keys and private research project records out of corporate website.
