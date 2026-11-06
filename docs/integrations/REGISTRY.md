@@ -89,3 +89,13 @@ These candidate IDs are provisional registry IDs; **none is marked INTEGRATED or
 | MX-APP-024 | SEKA — Source Evidence and Knowledge Architecture | [Odogwo/SEKA](https://github.com/Odogwo/SEKA) | README verified: documented source-grounded research protocols and NESTLE pilot; **not yet a standalone software application** | Research Products / Knowledge Platforms; future evidence-processing application candidate | CANDIDATE — no MAXYRON website link or deployed SEKA app verified |
 
 SEKA's NESTLE pilot demonstrates a research workflow, not proof of a finished product or completed research verification. Keep SEKA's own project registry and evidence provenance authoritative. Any future MAXYRON product page must distinguish documented architecture, working software, deployment and verified outputs.
+
+
+## 2026-11-06 — MX-APP-001 return navigation (implemented in product repository)
+
+- **User verified MAXYRON corporate website:** all five public routes opened, layout looked correct and contact `mailto:` opened correctly (user report). Outstanding issue: AI Verification Capacity Diagnostic did not provide a clear link back to MAXYRON.
+- **Product owner:** `Odogwo/ai-verification-capacity-diagnostic`; file `index.html`, commit `ca2ef8c44a22f0b3d9b268e90484ac6819410edc`.
+- **Change:** added accessible, visible navigation before the diagnostic heading: **Back to MAXYRON Products** → `https://maxyron.com/products`; **MAXYRON Home** → `https://maxyron.com/`. Responsive inline links; the navigation is excluded from report print output.
+- **Evidence:** updated `index.html` fetched back and checked for both destinations and `no-print` class. GitHub commit status **Vercel: success** for the above SHA, target `https://vercel.com/odogwos-projects/maxyron-ai-verification/4byuH1ud8JqctDJMhSntnjTbN4Xj`.
+- **Separate pending check:** independently inspect rendered diagnostic URL on desktop/mobile, confirm return navigation from the questionnaire and results view, and confirm printing still omits the links. Successful deployment status alone does not prove each interaction.
+- **Authority:** `Odogwo/maxyron-website` governs parent portfolio placement; the diagnostic application repository owns its interface and functional changes. Do not duplicate its code in the corporate repository.
