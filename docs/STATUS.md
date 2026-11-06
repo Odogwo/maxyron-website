@@ -172,3 +172,13 @@ Move from brochure MVP to a credible client-acquisition site: clearly described 
 - **Decision:** Keep SEKA in the MAXYRON product development catalogue as an **integration candidate**; do not expose direct app link until live access, auth/privacy, reciprocal navigation, product-owner permissions and maturity claims are checked. No new public MAXYRON website code was changed by this audit.
 - **Build validation:** Independent GitHub Actions build status is still unconfirmed by available connector run retrieval. Earlier successful Vercel status and user site test are separately evidenced; do not treat either as GitHub Actions CI success.
 - **Next smallest step:** inspect SEKA's own up-to-date handoff/deployment and verify a safe public landing route before reciprocal integration. Keep all secret keys and private research project records out of corporate website.
+
+
+## 2026-11-06 — Contact navigation simplified (user-requested UX fix)
+
+- **User observation:** Clicking **Contact** first scrolled to the homepage contact section, requiring a second click on **Discuss your project** to start an email.
+- **Implemented:** On all five corporate routes (`/`, `/services`, `/products`, `/learning`, `/research`), replace in-page `#contact` navigation destinations (including the visible Contact and start-conversation navigation actions) with `mailto:hello@maxyron.com?subject=MAXYRON%20enquiry`. Existing contact sections and their `Discuss your project` mailto CTAs are preserved.
+- **Functional change:** Clicking Contact should now launch the visitor's configured mail application directly, with recipient and subject prefilled; this depends on having a configured mail handler, not a custom website contact form.
+- **Automated guard:** `scripts/verify-site-structure.mjs` checks all five main navigation blocks for direct mailto destination and absence of Contact-section anchors.
+- **Verification:** Source readback and Vercel commit-status inspection to be recorded separately; browser/user confirmation for this new behavior pending.
+- **Reasoning:** A direct enquiry action reduces friction while retaining a readable contact section for visitors who scroll.
