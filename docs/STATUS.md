@@ -118,3 +118,16 @@ Move from brochure MVP to a credible client-acquisition site: clearly described 
 - **Production checks:** Attempts to fetch `https://maxyron.com/services` and `https://maxyron.com/products` did not return accessible content in this environment. **Live verification unresolved, not a confirmed deployment failure.**
 - **Build:** `npm run build` and a desktop/mobile browser test have **not** been performed in this session; repository commits are not proof of working production pages.
 - **Next gate:** Verify build/CI and Vercel's deployed commit; inspect live `/services`, `/products`, `/learning`, `/sitemap.xml`, responsiveness, contact links and product labels. Then scope Stage 4 Research & Knowledge.
+
+
+## 2026-11-06 — Stage 4 Research & Knowledge (GitHub source implementation)
+
+- **Primary architecture authority:** `docs/strategy/CURRENT-RECONCILED-ARCHITECTURE.md` (R1).
+- **Implementation blueprint:** `docs/implementation/WEBSITE-STAGE-4-RESEARCH-BLUEPRINT.md`.
+- **Added:** `app/research/page.tsx` and `app/research/research.css`. The new corporate-facing page explains research methods, knowledge architecture, human reflection and spiritual/cultural inquiry with appropriate evidentiary distinctions.
+- **Navigation:** `/research` linked from homepage, Services, Products, Learning; homepage top navigation was simplified to reduce crowded duplicate sections; `app/sitemap.ts` now includes `/research`.
+- **Guardrails:** no fabricated publications or peer review, no exposure of private research files; Research & Advisory continues as one of the four client services, while scholarly software remains under Products.
+- **Live-site retrieval:** web inspection for `https://maxyron.com/services`, `/products`, `/learning` and `/sitemap.xml` returned access errors in the browsing environment. This does not establish whether Vercel deployed.
+- **Independent build attempted:** model container has Node 22 and npm 10, but `git clone https://github.com/Odogwo/maxyron-website.git` failed with `Could not resolve host: github.com`. Therefore **no npm install/build was performed** and no passing build is claimed.
+- **Status:** GitHub repository implementation committed; production build and live deployment **UNVERIFIED**.
+- **Next priority (engineering gate before further website expansion):** obtain a successful Next.js build and verify Vercel commit/production for `/`, `/services`, `/products`, `/learning`, `/research`, and sitemap. Review mobile navigation and enquiry links. Update this status with actual build output and deployed commit.
