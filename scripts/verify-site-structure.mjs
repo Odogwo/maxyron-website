@@ -24,6 +24,13 @@ for (const { route, page } of routes) {
     if (!existsSync(stylesheet)) failures.push(`Missing page stylesheet: ${stylesheet}`);
     if (!source.includes(`'./${route.slice(1)}.css'`)) failures.push(`Missing CSS import: ${page}`);
   }
+  const nav = source.match(/<nav aria-label="Main navigation">[\\s\\S]*?<\\/nav>/)?.[0] ?? '';
+  if (!nav.includes('href="mailto:hello@maxyron.com?subject=MAXYRON%20enquiry"')) {
+    failures.push(`${page} main navigation must open the MAXYRON email composer directly`);
+  }
+  if (nav.includes('href="#contact"') || nav.includes('href="/#contact"')) {
+    failures.push(`${page} main Contact must not use an in-page anchor`);
+  }
   for (const destination of ['/services', '/products', '/learning', '/research']) {
     if (!source.includes(`href="${destination}"`)) {
       failures.push(`${page} missing navigation link to ${destination}`);
