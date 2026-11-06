@@ -8,7 +8,7 @@ These notes preserve MAXYRON's organizational identity, proposed product archite
 
 ## Current assessment awaiting next reconciliation
 
-- [Shared Engineering Infrastructure and Cross-Disciplinary Mastery — Placement Assessment (2026-11-06)](ASSESSMENT-SHARED-ENGINEERING-INFRASTRUCTURE-2026-11-06.md): documents recommended cross-functional ownership of Elite Lab Node 01, subject-domain reuse, and non-destructive integration. This is **not** a second active strategy, R2 approval, new public service, or deployed feature. R1 remains the current authority.
+- **[MAXYRON Development Record — Computer Science, Shared Infrastructure and Cross-Disciplinary Learning (2026-11-06)](ASSESSMENT-SHARED-ENGINEERING-INFRASTRUCTURE-2026-11-06.md):** full origin, alternative classifications, user clarification, disciplined three-role model (learning discipline / operational infrastructure / products), reusable learning and mastery progression, implementation examples, evidence boundaries, repository ownership, migration safeguards and next actions. **Current recommendation:** Linux web-server build is Computer Science/Systems Engineering learning, while ELAB-N01 is operational MAXYRON shared infrastructure. Previous broader cross-domain assessment is preserved as an appendix. This is not a competing active strategy, a new repo or a published feature; R1 remains authoritative.
 
 ## Historical architecture — retained for provenance
 
