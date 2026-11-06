@@ -6,6 +6,10 @@ These notes preserve MAXYRON's organizational identity, proposed product archite
 
 **[MAXYRON Current Reconciled Architecture — R1](CURRENT-RECONCILED-ARCHITECTURE.md)** (2026-11-05) is the **current working strategic authority for portfolio classification and the next website build**. It reconciles the previous versions, provides one placement table for subjects, services, products, learning/mastery and research, and distinguishes **what is implemented NOW** from **proposed NEXT** and **conditional LATER**. **Read this first** for questions about what MAXYRON is, where any activity belongs, and how to structure the site.
 
+## Dedicated Spirituality & Philosophy knowledge publishing plan
+
+- [Spiritual Knowledge Repository & MAXYRON Publishing Plan — 2026-11-06](SPIRITUAL-KNOWLEDGE-REPOSITORY-AND-MAXYRON-PUBLISHING-PLAN-2026-11-06.md): approved design direction for a private source repository and reviewed public articles under Research & Knowledge. **Target repository not yet created; no live spiritual articles.**
+
 ## Cross-workstream continuity map
 
 - **[MAXYRON / Engineering / Spirituality / AI & Mastery — Cross-Workstream Design and Continuity Map (2026-11-06)](CROSS-WORKSTREAM-DESIGN-AND-CONTINUITY-MAP-2026-11-06.md):** reconciles the distinct workstreams, design reasoning, canonical ownership, spiritual article evolution protocol, computer science/infrastructure division, implemented versus proposed features, repository status and next gates. This is a **continuity cross-reference**, not a new R2; R1 remains authoritative.
