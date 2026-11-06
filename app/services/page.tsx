@@ -50,8 +50,8 @@ export default function ServicesPage() {
   return <main>
     <header className="site-header"><div className="shell nav">
       <a className="wordmark" href="/" aria-label="MAXYRON home"><span className="mark">M<span>.</span></span><span>MAXYRON</span></a>
-      <nav aria-label="Main navigation"><a href="/">Home</a><a href="/services" aria-current="page">Services</a><a href="/products">Products</a><a href="/learning">Learning</a><a href="/research">Research</a><a href="/#approach">Approach</a><a href="/#about">About</a><a href="/#contact">Contact</a></nav>
-      <a className="nav-cta" href="/#contact">Start a conversation <span aria-hidden="true">↗</span></a>
+      <nav aria-label="Main navigation"><a href="/">Home</a><a href="/services" aria-current="page">Services</a><a href="/products">Products</a><a href="/learning">Learning</a><a href="/research">Research</a><a href="/#approach">Approach</a><a href="/#about">About</a><a href="mailto:hello@maxyron.com?subject=MAXYRON%20enquiry">Contact</a></nav>
+      <a className="nav-cta" href="mailto:hello@maxyron.com?subject=MAXYRON%20enquiry">Start a conversation <span aria-hidden="true">↗</span></a>
     </div></header>
 
     <section className="service-hero">
@@ -83,6 +83,6 @@ export default function ServicesPage() {
       <div><p>We agree on the question, intended users, requirements, deliverables and evidence of success before choosing technology or methods. Appropriate review, testing and handover are part of the engagement.</p><a className="button light" href="/#approach">Explore our method <span aria-hidden="true">↗</span></a></div>
     </div></section>
     <section className="contact-section"><div className="shell contact-inner"><div><p className="eyebrow">START A CONVERSATION</p><h2>What are you<br/>trying to solve<span className="period">?</span></h2><p>Describe your objective, current situation, constraints and what a useful outcome would look like. We can discuss whether an engagement is appropriate.</p></div><a className="button light" href="mailto:hello@maxyron.com?subject=MAXYRON%20service%20enquiry">Email MAXYRON <span aria-hidden="true">↗</span></a></div></section>
-    <footer className="footer"><div className="shell footer-top"><div><a className="wordmark" href="/"><span className="mark">M<span>.</span></span><span>MAXYRON</span></a><p>Engineering Intelligent Systems.</p></div><div className="footer-links"><a href="/">Home</a><a href="/services">Services</a><a href="/products">Products</a><a href="/#about">About</a><a href="/#contact">Contact</a></div></div><div className="shell footer-bottom"><span>© {new Date().getFullYear()} MAXYRON. All rights reserved.</span><span>THINK CLEARLY. BUILD BOLDLY.</span></div></footer>
+    <footer className="footer"><div className="shell footer-top"><div><a className="wordmark" href="/"><span className="mark">M<span>.</span></span><span>MAXYRON</span></a><p>Engineering Intelligent Systems.</p></div><div className="footer-links"><a href="/">Home</a><a href="/services">Services</a><a href="/products">Products</a><a href="/#about">About</a><a href="mailto:hello@maxyron.com?subject=MAXYRON%20enquiry">Contact</a></div></div><div className="shell footer-bottom"><span>© {new Date().getFullYear()} MAXYRON. All rights reserved.</span><span>THINK CLEARLY. BUILD BOLDLY.</span></div></footer>
   </main>;
 }
