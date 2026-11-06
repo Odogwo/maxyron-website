@@ -152,3 +152,14 @@ Move from brochure MVP to a credible client-acquisition site: clearly described 
 - **Discovery:** `docs/README.md` now links the portfolio register. Detailed site integration evidence remains in `docs/integrations/REGISTRY.md`; venture/promotions governance remains under Elite_KOS.
 - **Verification status:** register files committed; readback to follow. This does not establish each candidate's currently working runtime or a new website deployment.
 - **Next engineering gate:** check independently passing website CI, verify production routes and mobile navigation; subsequently update candidate readiness from each owning repository instead of promoting unverified products.
+
+
+## 2026-11-06 — User site acceptance + diagnostic return-navigation repair
+
+- **User test:** all five MAXYRON pages opened; overall layout looked correct; contact email action opened correctly.
+- **User issue:** linked AI Verification Capacity Diagnostic lacked clear navigation back to MAXYRON.
+- **Fix committed in owning application repository:** `Odogwo/ai-verification-capacity-diagnostic/index.html`, SHA `ca2ef8c44a22f0b3d9b268e90484ac6819410edc`. Header links: `https://maxyron.com/products` (Back to MAXYRON Products), `https://maxyron.com/` (MAXYRON Home). Links have keyboard focus styling and are omitted in printed reports.
+- **Repository readback:** both links and print-exclusion confirmed in diagnostic HTML. **Vercel status:** success on diagnostic fix commit, product project `maxyron-ai-verification`.
+- **Full detail:** `docs/integrations/REGISTRY.md` (MX-APP-001).
+- **Pending user/browser confirmation:** reload diagnostic URL and click return link from initial screen and completed report; confirm mobile layout and print preview. This is distinct from Vercel success and source verification.
+- **Next gate:** review independent CI build status and continue approved portfolio integration only after evidence, without inventing product readiness.
