@@ -33,7 +33,7 @@ for (const { route, page } of routes) {
 
 const sitemap = existsSync(sitemapPath) ? readFileSync(sitemapPath, 'utf8') : '';
 for (const { route } of routes.filter((r) => r.route !== '/')) {
-  if (!sitemap.includes(`/\${route.slice(1)}`) && !sitemap.includes(route)) {
+  if (!sitemap.includes(route)) {
     failures.push(`Sitemap missing ${route}`);
   }
 }
