@@ -20,7 +20,7 @@ export default function LearningPage() {
   return <main>
     <header className="site-header"><div className="shell nav">
       <a className="wordmark" href="/" aria-label="MAXYRON home"><span className="mark">M<span>.</span></span><span>MAXYRON</span></a>
-      <nav aria-label="Main navigation"><a href="/">Home</a><a href="/services">Services</a><a href="/products">Products</a><a href="/learning" aria-current="page">Learning</a><a href="/#about">About</a><a href="/#contact">Contact</a></nav>
+      <nav aria-label="Main navigation"><a href="/">Home</a><a href="/services">Services</a><a href="/products">Products</a><a href="/learning" aria-current="page">Learning</a><a href="/research">Research</a><a href="/#about">About</a><a href="/#contact">Contact</a></nav>
       <a className="nav-cta" href="/#contact">Start a conversation <span aria-hidden="true">↗</span></a>
     </div></header>
     <section className="learning-hero"><div className="shell">
@@ -54,6 +54,6 @@ export default function LearningPage() {
       </article>)}</div>
     </section>
     <section className="contact-section"><div className="shell contact-inner"><div><p className="eyebrow">LEARNING SYSTEMS</p><h2>Develop capability<br/>with purpose<span className="period">.</span></h2><p>We are developing structured knowledge and mastery technologies. Contact MAXYRON to discuss a learning-systems project or potential collaboration.</p></div><a className="button light" href="mailto:hello@maxyron.com?subject=MAXYRON%20learning%20systems">Contact MAXYRON <span aria-hidden="true">↗</span></a></div></section>
-    <footer className="footer"><div className="shell footer-top"><div><a className="wordmark" href="/"><span className="mark">M<span>.</span></span><span>MAXYRON</span></a><p>Engineering Intelligent Systems.</p></div><div className="footer-links"><a href="/">Home</a><a href="/services">Services</a><a href="/products">Products</a><a href="/learning">Learning</a><a href="/#contact">Contact</a></div></div><div className="shell footer-bottom"><span>© {new Date().getFullYear()} MAXYRON. All rights reserved.</span><span>THINK CLEARLY. BUILD BOLDLY.</span></div></footer>
+    <footer className="footer"><div className="shell footer-top"><div><a className="wordmark" href="/"><span className="mark">M<span>.</span></span><span>MAXYRON</span></a><p>Engineering Intelligent Systems.</p></div><div className="footer-links"><a href="/">Home</a><a href="/services">Services</a><a href="/products">Products</a><a href="/learning">Learning</a><a href="/research">Research</a><a href="/#contact">Contact</a></div></div><div className="shell footer-bottom"><span>© {new Date().getFullYear()} MAXYRON. All rights reserved.</span><span>THINK CLEARLY. BUILD BOLDLY.</span></div></footer>
   </main>;
 }
