@@ -10,6 +10,21 @@ These notes preserve MAXYRON's organizational identity, proposed product archite
 
 - **[MAXYRON Development Record — Computer Science, Shared Infrastructure and Cross-Disciplinary Learning (2026-11-06)](ASSESSMENT-SHARED-ENGINEERING-INFRASTRUCTURE-2026-11-06.md):** full origin, alternative classifications, user clarification, disciplined three-role model (learning discipline / operational infrastructure / products), reusable learning and mastery progression, implementation examples, evidence boundaries, repository ownership, migration safeguards and next actions. **Current recommendation:** Linux web-server build is Computer Science/Systems Engineering learning, while ELAB-N01 is operational MAXYRON shared infrastructure. Previous broader cross-domain assessment is preserved as an appendix. This is not a competing active strategy, a new repo or a published feature; R1 remains authoritative.
 
+## Continuing MAXYRON development capture protocol
+
+**Goal:** Important design work must remain recoverable from GitHub without depending on ChatGPT conversations. The chat is a work surface, not the source of truth.
+
+For every substantial MAXYRON idea, clarification, architecture refinement, proposed feature or engineering decision:
+
+1. **Resolve the existing owner first:** start from this strategy index and current R1; inspect the appropriate domain/project repository and current state. Do not create a new document/repository simply because the conversation introduces a new term.
+2. **Preserve the complete intellectual evolution:** problem and origin, user's exact underlying distinction, alternatives, rejected proposals, rationale, principles, mechanisms, dependencies, architecture, implementation examples/code where appropriate, evidence, risks, state and smallest next action.
+3. **Update one correct canonical note:** extend an existing development record where the governing question remains the same; create a distinct note only if its scope and authority are independently justified. Keep historical versions/findings as provenance rather than silent rewrites.
+4. **Separate recommendation and authority:** a development record does not itself replace the CURRENT reconciled strategy, modify the public website, certify mastery, establish a runtime service or approve a migration.
+5. **Propagate discovery:** link the durable note here, reference it from `docs/README.md` when a major system is affected, and record material decisions in `docs/HISTORY.md`. Update domain owners' own states only when their actual responsibilities change.
+6. **Verify persistence:** write to GitHub, obtain a commit, fetch/read back the changed file and check substantial content. Never report an unverified save as completed.
+
+When a new reconciliation is approved, prepare an **R1 → R2** change matrix (retained / added / modified / superseded / deferred), preserve historical notes, and change this index to point at the one new active authority.
+
 ## Historical architecture — retained for provenance
 
 1. [v1 — Organization, Product Portfolio & Mastery Systems Architecture](MAXYRON-ORGANIZATION-PRODUCT-AND-MASTERY-ARCHITECTURE.md) (2026-11-02): original parent identity, existing four services, proposed product families and shared mastery principles.
