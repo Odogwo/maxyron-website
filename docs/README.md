@@ -1,6 +1,8 @@
 # MAXYRON Project Knowledge Base
 Last documented: 2026-10-31. This is the project's recovery entry point, independent of chat history.
 
+**Spirituality workspace plan:** [Dedicated knowledge repository and MAXYRON publishing integration](strategy/SPIRITUAL-KNOWLEDGE-REPOSITORY-AND-MAXYRON-PUBLISHING-PLAN-2026-11-06.md). The proposed separate repository remains uncreated and unverified.
+
 ## Start here
 **Cross-topic continuity:** [MAXYRON, Computer Science/Engineering, Spirituality and AI/Mastery — complete design map](strategy/CROSS-WORKSTREAM-DESIGN-AND-CONTINUITY-MAP-2026-11-06.md). Read this to recover the linked design discussions, proper repository owners, decisions, work already implemented and pending work without this conversation.
 
