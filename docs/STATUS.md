@@ -142,3 +142,13 @@ Move from brochure MVP to a credible client-acquisition site: clearly described 
 - **CI caveat:** the available GitHub workflow-run retrieval API filters to PR-triggered runs and cannot serve as proof of success for this push; no passing independent CI result has yet been observed.
 - **Latest status check:** GitHub reported Vercel **pending** for commit `0cc6d9060f38a596a5a6fbcdd76743d94f82ecc8`, the latest test-script change, when checked. Do not infer success before confirmed.
 - **Current gate:** await/check an actual successful independent CI/build run and verify Vercel's deployed commit + live route behaviour in a browser. Confirm nav, sitemap, responsive rendering and contact links before further feature additions.
+
+
+## 2026-11-06 — Operational Portfolio Register established
+
+- **New operational inventory:** `docs/portfolio/REGISTER.md`; machine-readable companion: `docs/portfolio/portfolio.csv`.
+- **Strategic authority unchanged:** `docs/strategy/CURRENT-RECONCILED-ARCHITECTURE.md` R1 remains current. Portfolio register is an operational crosswalk, **not** an architecture R2 or competing version.
+- **Content:** four canonical public services, 23 classified items, primary function/family, repository authority, website placement, maturity, uncertainty and next verification action; research/advisory vs research/knowledge vs research products explicitly distinguished. Website design and cybersecurity are not added as new verified public service divisions.
+- **Discovery:** `docs/README.md` now links the portfolio register. Detailed site integration evidence remains in `docs/integrations/REGISTRY.md`; venture/promotions governance remains under Elite_KOS.
+- **Verification status:** register files committed; readback to follow. This does not establish each candidate's currently working runtime or a new website deployment.
+- **Next engineering gate:** check independently passing website CI, verify production routes and mobile navigation; subsequently update candidate readiness from each owning repository instead of promoting unverified products.
