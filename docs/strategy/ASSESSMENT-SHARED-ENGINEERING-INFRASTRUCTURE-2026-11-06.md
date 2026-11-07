@@ -249,3 +249,10 @@ This assessment should be considered in the next **R2 reconciled strategic revis
 
 **Guiding distinction:** The subject of an educational programme is not automatically the owner of the underlying infrastructure.
 
+
+## 2026-11-07 addendum — multi-product operations question
+
+The earlier decision to **defer a new infrastructure repository** was based on ELAB-N01 as one node. A subsequent MAXYRON-wide question now encompasses the operational inventories and dependencies of several distinct products, plus deriving learning mastery from every meaningful build. This supports a *narrower, better-justified* proposed shared owner for cross-product operations rather than a universal copy of all project records.
+
+See [Infrastructure Authority, Product Ownership and Build-to-Mastery Proposal](PROPOSAL-MAXYRON-INFRASTRUCTURE-AND-BUILD-TO-MASTERY-2026-11-07.md). The proposal names private `Odogwo/maxyron-infrastructure` as a **candidate** cross-product register/runbook authority only; product code/documentation and disciplinary mastery remain owned by their existing repositories. ELAB-N01 original operational documentation remains authoritative in private Elite_KOS until a separate verified migration. No new repository, file migration, R2 or public feature was approved by recording this design refinement.
+
