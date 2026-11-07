@@ -6,6 +6,8 @@ Last documented: 2026-10-31. This is the project's recovery entry point, indepen
 ## Start here
 **Cross-topic continuity:** [MAXYRON, Computer Science/Engineering, Spirituality and AI/Mastery — complete design map](strategy/CROSS-WORKSTREAM-DESIGN-AND-CONTINUITY-MAP-2026-11-06.md). Read this to recover the linked design discussions, proper repository owners, decisions, work already implemented and pending work without this conversation.
 
+**Independent-application integration authority:** [One-Website Integration Standard](integrations/INTEGRATION-STANDARD.md), [current integration register](integrations/REGISTRY.md), and [machine-readable systems manifest](integrations/systems.json). One corporate website with separately hosted/owned apps; only verified public app URLs are linked. Static registry validation is part of website CI, but current workflow success must be checked independently.
+
 **Operational item lookup:** [MAXYRON Portfolio Register](portfolio/REGISTER.md) and [machine-readable portfolio index](portfolio/portfolio.csv). Use these to classify any service, product, learning domain, knowledge subject, infrastructure capability or brand relationship. The strategic authority remains R1.
 
 0. **[CURRENT RECONCILED ARCHITECTURE — R1](strategy/CURRENT-RECONCILED-ARCHITECTURE.md)** — single current working authority for MAXYRON identity, service/product/knowledge/learning classification, subject ownership and present-vs-future website structure. For future reconciliations, follow [strategy index](strategy/README.md). The website implementation and deployment status remain separately governed by ARCHITECTURE.md and STATUS.md.
