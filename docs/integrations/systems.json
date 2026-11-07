@@ -1,0 +1,255 @@
+{
+  "schema_version": 1,
+  "owner": "Odogwo/maxyron-website",
+  "purpose": "Canonical corporate-site integration status only; product architecture stays in owner repositories; portfolio classification stays in portfolio register",
+  "reviewed_on": "2026-11-07",
+  "records": [
+    {
+      "system_id": "MX-WEB-001",
+      "name": "MAXYRON corporate website",
+      "kind": "corporate-site",
+      "owner_repo": "Odogwo/maxyron-website",
+      "hosting": {
+        "provider": "Vercel",
+        "candidate_url": "https://maxyron.com",
+        "approved_public_url": "https://maxyron.com",
+        "evidence": "user-confirmed"
+      },
+      "website_entry": {
+        "website_route": "/",
+        "state": "corporate-self",
+        "source_file": "app/page.tsx",
+        "display_name": "MAXYRON"
+      },
+      "return_navigation": {
+        "target": null,
+        "state": "not-applicable"
+      },
+      "access": "public-corporate",
+      "readiness": "website-user-tested",
+      "verified_on": "2026-11-06",
+      "evidence_refs": [
+        "docs/STATUS.md",
+        "docs/ARCHITECTURE.md"
+      ],
+      "learning_owner": null,
+      "next_gate": "Verify current production deployment commit and independently test five corporate routes"
+    },
+    {
+      "system_id": "MX-APP-001",
+      "name": "AI Verification Capacity Diagnostic",
+      "kind": "independent-product",
+      "owner_repo": "Odogwo/ai-verification-capacity-diagnostic",
+      "hosting": {
+        "provider": "Vercel",
+        "candidate_url": "https://maxyron-ai-verification.vercel.app/",
+        "approved_public_url": "https://maxyron-ai-verification.vercel.app/",
+        "evidence": "user-confirmed"
+      },
+      "website_entry": {
+        "website_route": "/products",
+        "state": "linked-user-confirmed",
+        "source_file": "app/products/page.tsx",
+        "display_name": "AI Verification Capacity Diagnostic"
+      },
+      "return_navigation": {
+        "target": "https://maxyron.com/products",
+        "state": "user-confirmed"
+      },
+      "access": "public-demo",
+      "readiness": "self-reported-prototype-not-certified",
+      "verified_on": "2026-11-06",
+      "evidence_refs": [
+        "docs/integrations/REGISTRY.md",
+        "Odogwo/ai-verification-capacity-diagnostic/index.html"
+      ],
+      "learning_owner": "Odogwo/maxyron-ai",
+      "next_gate": "Recheck latest production version plus mobile keyboard and print behavior; do not claim independent audit"
+    },
+    {
+      "system_id": "MX-APP-002",
+      "name": "Psychology Knowledge Mastery",
+      "kind": "independent-learning-app",
+      "owner_repo": "Odogwo/Psychology-Knowledge-Mastery",
+      "hosting": {
+        "provider": "Vercel (historical report)",
+        "candidate_url": "https://psychology-knowledge-mastery.vercel.app/",
+        "approved_public_url": null,
+        "evidence": "historical-user-report-not-currently-verified"
+      },
+      "website_entry": {
+        "website_route": "/products",
+        "state": "listed-only",
+        "source_file": "app/products/page.tsx",
+        "display_name": "Psychology Knowledge Mastery"
+      },
+      "return_navigation": {
+        "target": "https://maxyron.com/learning",
+        "state": "pending"
+      },
+      "access": "review-required",
+      "readiness": "integration-candidate",
+      "verified_on": null,
+      "evidence_refs": [
+        "docs/integrations/REGISTRY.md",
+        "Odogwo/Psychology-Knowledge-Mastery/README.md"
+      ],
+      "learning_owner": "Odogwo/Psychology-Knowledge-Mastery",
+      "next_gate": "Verify public deployment and rights/content/privacy; then test return navigation before adding an external link"
+    },
+    {
+      "system_id": "MX-APP-003",
+      "name": "KEMAS",
+      "kind": "independent-product",
+      "owner_repo": "Odogwo/kemas-learning-system",
+      "hosting": {
+        "provider": "local-development-only-evidenced",
+        "candidate_url": null,
+        "approved_public_url": null,
+        "evidence": "repository-source-only"
+      },
+      "website_entry": {
+        "website_route": "/products",
+        "state": "listed-only",
+        "source_file": "app/products/page.tsx",
+        "display_name": "KEMAS"
+      },
+      "return_navigation": {
+        "target": "https://maxyron.com/products",
+        "state": "pending"
+      },
+      "access": "review-required",
+      "readiness": "development-candidate",
+      "verified_on": null,
+      "evidence_refs": [
+        "docs/integrations/REGISTRY.md",
+        "Odogwo/kemas-learning-system/README.md"
+      ],
+      "learning_owner": "domain-owner-review-needed",
+      "next_gate": "Verify production deployment and safe upload/privacy handling before exposing a public application link"
+    },
+    {
+      "system_id": "MX-APP-024",
+      "name": "SEKA",
+      "kind": "independent-product",
+      "owner_repo": "Odogwo/SEKA",
+      "hosting": {
+        "provider": "Vercel frontend and Render API (user-reported)",
+        "candidate_url": "https://seka-one.vercel.app/",
+        "approved_public_url": null,
+        "evidence": "historical-user-report-not-currently-verified"
+      },
+      "website_entry": {
+        "website_route": "/products",
+        "state": "listed-only",
+        "source_file": "app/products/page.tsx",
+        "display_name": "SEKA"
+      },
+      "return_navigation": {
+        "target": "https://maxyron.com/products",
+        "state": "pending"
+      },
+      "access": "authenticated-research-app-review-required",
+      "readiness": "source-implemented-integration-candidate",
+      "verified_on": null,
+      "evidence_refs": [
+        "docs/integrations/SEKA-INTEGRATION-READINESS-AUDIT-2026-11-06.md",
+        "Odogwo/SEKA/apps/web/app/page.tsx"
+      ],
+      "learning_owner": "Odogwo/maxyron-ai",
+      "next_gate": "Reconcile SEKA own deployment status and confirm public-safe landing route without exposing research project metadata"
+    },
+    {
+      "system_id": "MX-APP-005",
+      "name": "MAXYRON AI",
+      "kind": "independent-platform-development",
+      "owner_repo": "Odogwo/maxyron-ai",
+      "hosting": {
+        "provider": "not-verified",
+        "candidate_url": null,
+        "approved_public_url": null,
+        "evidence": "repository-source-only"
+      },
+      "website_entry": {
+        "website_route": "/learning",
+        "state": "candidate",
+        "source_file": null,
+        "display_name": null
+      },
+      "return_navigation": {
+        "target": "https://maxyron.com/learning",
+        "state": "pending"
+      },
+      "access": "not-publicly-approved",
+      "readiness": "consolidation-in-progress",
+      "verified_on": null,
+      "evidence_refs": [
+        "Odogwo/maxyron-ai/ARCHITECTURE.md",
+        "docs/portfolio/REGISTER.md"
+      ],
+      "learning_owner": "Odogwo/maxyron-ai",
+      "next_gate": "Reconcile AI sources and confirm an independently deployed learner-facing surface before integration"
+    },
+    {
+      "system_id": "MX-APP-011",
+      "name": "BLM Applied AI Engineering",
+      "kind": "learning-programme",
+      "owner_repo": "Odogwo/BLM-AI-Engineering",
+      "hosting": {
+        "provider": "not-verified",
+        "candidate_url": null,
+        "approved_public_url": null,
+        "evidence": "repository-source-only"
+      },
+      "website_entry": {
+        "website_route": "/learning",
+        "state": "listed-only",
+        "source_file": "app/learning/page.tsx",
+        "display_name": "Applied AI Engineering"
+      },
+      "return_navigation": {
+        "target": "https://maxyron.com/learning",
+        "state": "pending"
+      },
+      "access": "programme-not-launched",
+      "readiness": "programme-development",
+      "verified_on": null,
+      "evidence_refs": [
+        "docs/implementation/WEBSITE-STAGE-3-LEARNING-BLUEPRINT.md",
+        "docs/portfolio/REGISTER.md"
+      ],
+      "learning_owner": "Odogwo/BLM-AI-Engineering",
+      "next_gate": "Verify programme deliverables and learner access scope before an interactive course link"
+    },
+    {
+      "system_id": "MX-INF-001",
+      "name": "Elite Lab Node 01",
+      "kind": "private-infrastructure",
+      "owner_repo": "Odogwo/Elite_KOS",
+      "hosting": {
+        "provider": "local-private-Linux-lab",
+        "candidate_url": null,
+        "approved_public_url": null,
+        "evidence": "user-confirmed-local-only"
+      },
+      "website_entry": {
+        "website_route": null,
+        "state": "private-not-public",
+        "source_file": null,
+        "display_name": null
+      },
+      "return_navigation": {
+        "target": null,
+        "state": "not-applicable"
+      },
+      "access": "private-local-only",
+      "readiness": "internal-service-and-ssh-verified",
+      "verified_on": "2026-11-07",
+      "evidence_refs": [
+        "Odogwo/Elite_KOS/Execution/Systems/ELAB-N01"
+      ],
+      "learning_owner": "Odogwo/Computer-Science-OS",
+      "next_gate": "Assess battery/power and backups; consider a sanitized approved case study but never publish private node access"
+    }
+  ]
+}
