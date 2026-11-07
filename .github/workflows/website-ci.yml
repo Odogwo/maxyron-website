@@ -31,3 +31,6 @@ jobs:
 
       - name: Verify page sources and cross-navigation
         run: node scripts/verify-site-structure.mjs
+
+      - name: Validate corporate-to-product integration registry
+        run: node scripts/validate-integration-registry.mjs
