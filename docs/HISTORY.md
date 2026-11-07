@@ -26,3 +26,15 @@ Append date, change, why, evidence (commit/deployment/screenshot), verification 
 - **Development record:** `docs/strategy/ASSESSMENT-SHARED-ENGINEERING-INFRASTRUCTURE-2026-11-06.md` revised with architecture model, learning flow, ownership matrix, decisions/alternatives, examples, evolution history, restoration instructions and the initial assessment preserved in the appendix.
 - **Authority guardrail:** This is a durable strategy development record pending incorporation into a formally reconciled R2; current R1, four published service categories, source repositories, deployed applications and node runtime are unchanged by this documentation change.
 - **Next:** Reconcile the current computing curriculum and ELAB teaching evidence; map shared mastery interfaces before new repositories or migrations; eventually propose R2 with explicit change table and approvals.
+
+## 2026-11-07 — One website / independently hosted applications integration register
+
+**User direction:** one public corporate MAXYRON website with independently developed and hosted products/learning applications linked back to the main website; shared infrastructure operations and product/domain learning remain separate responsibilities.
+
+**Implementation:** Created an integration protocol (`docs/integrations/INTEGRATION-STANDARD.md`), a focused JSON source of integration truth (`docs/integrations/systems.json`, eight audited system records), a static source/privacy consistency validator (`scripts/validate-integration-registry.mjs`), and an extra step in website CI to run it. Updated the live documentation registry `docs/integrations/REGISTRY.md`, project knowledge index, and status. Historical candidate records were retained rather than relabeled as public deployments. AI Verification is the sole previously user-tested independent public product link in this audited set; other candidates are not newly exposed.
+
+**Ownership:** The corporate website owns published integration records and navigation, independent product repositories own code/deployments and return-link implementation, the proposed private infrastructure layer owns cross-product operations if later approved, and domain repos own learning content. ELAB remains private.
+
+**Verification:** GitHub commits and read-back succeeded for new/updated source; an independent static cross-check found JSON records consistent with source page labels and approved links. Remote CI and production browsing were not established in this session; the standalone validation command remains a next test. No frontend UI, DNS, hosting or authentication was changed by this documentation/governance implementation.
+
+**Next:** Check remote CI status, verify an additional product's publicly safe landing route and intended audience, implement/verify reciprocal navigation within its owner repo, and only then publish its URL from MAXYRON.
