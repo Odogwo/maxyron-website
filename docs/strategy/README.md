@@ -14,6 +14,10 @@ These notes preserve MAXYRON's organizational identity, proposed product archite
 
 - **[MAXYRON / Engineering / Spirituality / AI & Mastery — Cross-Workstream Design and Continuity Map (2026-11-06)](CROSS-WORKSTREAM-DESIGN-AND-CONTINUITY-MAP-2026-11-06.md):** reconciles the distinct workstreams, design reasoning, canonical ownership, spiritual article evolution protocol, computer science/infrastructure division, implemented versus proposed features, repository status and next gates. This is a **continuity cross-reference**, not a new R2; R1 remains authoritative.
 
+## One main MAXYRON website; independent connected applications — 2026-11-07
+
+**User-confirmed decision:** One corporate website at `maxyron.com` is the entry point. All independent products and learning applications keep their own repositories, hosting and releases, connecting to the main MAXYRON site through governed links/integrations. See [hosting and integration design with ratification addendum](PROPOSAL-MAXYRON-HOSTING-AND-PLATFORM-INTEGRATION-2026-11-07.md). This decides the high-level hosting principle; subdomains, separate infrastructure repo creation and R2 strategy revision remain pending.
+
 ## Unified hosting and website integration proposal — 2026-11-07
 
 - **[MAXYRON Unified Website, Distributed Hosting and Infrastructure Integration](PROPOSAL-MAXYRON-HOSTING-AND-PLATFORM-INTEGRATION-2026-11-07.md):** defines how the existing MAXYRON Vercel-hosted corporate website can act as the public entry point to independently hosted products, approved research and domain mastery applications; why private infrastructure governance is not a public website; optional future product subdomains, shared learning portal, identity, integration contracts and rollout gates. The design does **not** configure DNS, create infrastructure repositories or deploy new applications, and retains R1 as current architecture.
