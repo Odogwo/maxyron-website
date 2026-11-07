@@ -1,5 +1,34 @@
 # MAXYRON Integration Portfolio
 
+## CURRENT — One-Website Independent-Application Integration Snapshot (2026-11-07)
+
+**Governing user-confirmed principle:** `maxyron.com` is the sole corporate entry website. Independent applications retain their own code, hosting, authorization boundaries and release ownership, and connect back through verified links when approved. This section is the **current integration operating snapshot**, not a new MAXYRON strategic R2 or an automatic approval to expose projects.
+
+**Canonical structured status:** [systems.json](systems.json) (8 initial audited system records).  
+**Integration standard:** [INTEGRATION-STANDARD.md](INTEGRATION-STANDARD.md).  
+**Portfolio classification:** [Portfolio Register](../portfolio/REGISTER.md), which does not independently authorize a live link.  
+**Automated consistency check:** `node scripts/validate-integration-registry.mjs` (wired into website CI). This checks static source/metadata, **not** live site availability, authentication or a provider deployment.
+
+| System ID | Owning repository | Hosting / known address status | MAXYRON entry | Return navigation | Readiness and next gate |
+|---|---|---|---|---|---|
+| MX-WEB-001 MAXYRON | `Odogwo/maxyron-website` | Main site `https://maxyron.com`; Vercel per existing user/source records | Corporate self | Not applicable | User-tested; confirm fresh deployed commit |
+| MX-APP-001 AI Verification | `Odogwo/ai-verification-capacity-diagnostic` | Independent Vercel demo URL in manifest; previously user-tested | **Linked from Products; user-confirmed** | **Back to Products user-confirmed** | Self-report prototype, not validated audit; retest current production/mobile/print |
+| MX-APP-002 Psychology Mastery | `Odogwo/Psychology-Knowledge-Mastery` | Vercel address historically reported, fresh live verification unavailable | Listed on Products, no external app link | Not verified | Validate deployment, intended audience, content/rights |
+| MX-APP-003 KEMAS | `Odogwo/kemas-learning-system` | Local development source only; public deployment not verified | Listed on Products, no external app link | Not verified | Inspect production/privacy/upload safety |
+| MX-APP-024 SEKA | `Odogwo/SEKA` | External frontend/API hosting reported; no approved public-safe URL | Listed on Products, no external app link | Not verified | Verify auth, safe landing route and private research-project protection |
+| MX-APP-005 MAXYRON AI | `Odogwo/maxyron-ai` | Platform/repository development; hosting unverified | Learning candidate, not app-linked | Not verified | Reconcile sources and product surface |
+| MX-APP-011 Applied AI Engineering | `Odogwo/BLM-AI-Engineering` | Learning programme under development, no independently verified course app | Listed on Learning, no external app link | Not verified | Verify learning programme readiness |
+| MX-INF-001 ELAB-N01 | `Odogwo/Elite_KOS` (private operations) | **Private Linux lab; no public URL** | **No public link** | Not applicable | Maintain internal-only access; sanitised case study may be reviewed later |
+
+**Evidence precision:** Product URL existence in a README, user report, Vercel build status, or source code is not automatically a freshly browser-verified deployment. Public live checks in this work session were inconclusive. MX-APP-001 relies on dated prior user acceptance and source readback, not an independent fresh HTTP inspection. No new product URLs or DNS were published by this registry update.
+
+**Integration gate:** verify product release and auth/privacy → confirm HTTPS landing page and intended audience → test corporate link → implement/verify return navigation in the *product-owned repository* → record evidence and approval → only then promote to a new live external website link.
+
+### Legacy discovery records retained below
+
+Earlier discovery tables and audits remain available for provenance; their historical statuses are not a second current authoritative snapshot. If a candidate advances, update `systems.json` and this dated evidence record, rather than silently inferring deployment from earlier rows.
+
+
 Last reviewed: 2026-11-02. Evidence levels below are explicit; no automated synchronization is claimed.
 
 | ID | Application | Product repository | Deployment | MAXYRON integration | Integration status | Product status | Next action |
