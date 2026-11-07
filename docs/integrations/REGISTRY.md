@@ -140,3 +140,7 @@ The user confirmed that the **Back to MAXYRON Products** link works on the deplo
 - Source inspection identified an actual `apps/web` Next.js project dashboard and `apps/api` authenticated FastAPI project/governance routes in `Odogwo/SEKA`. The root README's earlier “not yet a standalone software application” statement is out of date relative to the source tree and requires owner reconciliation.
 - **Not established:** production URL/commit, intended public access, end-to-end runtime, sensitive-project exposure controls, and return-to-MAXYRON navigation. No new public external link was added.
 - Keep SEKA **under development / integration candidate** in the Products catalogue until all gates pass. An implemented source route is not evidence of a production-ready autonomous scholarly research agent.
+
+
+## 2026-11-07 — User priority deferral: SEKA and Psychology integration
+**User instruction:** Pause public MAXYRON website onboarding for MX-APP-024 SEKA and MX-APP-002 Psychology Knowledge Mastery. They retain their existing `listed-only`/candidate status in the [systems manifest](systems.json); no new public app link is approved, no return navigation is to be added as part of this workstream, and neither application should be described as shut down. Their separate engineering and learning work is not cancelled. The next immediate work is ELAB-N01 operational reliability, not application publication. Preserve the integration acceptance checklist for resumption.
