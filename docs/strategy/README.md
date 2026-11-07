@@ -14,6 +14,10 @@ These notes preserve MAXYRON's organizational identity, proposed product archite
 
 - **[MAXYRON / Engineering / Spirituality / AI & Mastery — Cross-Workstream Design and Continuity Map (2026-11-06)](CROSS-WORKSTREAM-DESIGN-AND-CONTINUITY-MAP-2026-11-06.md):** reconciles the distinct workstreams, design reasoning, canonical ownership, spiritual article evolution protocol, computer science/infrastructure division, implemented versus proposed features, repository status and next gates. This is a **continuity cross-reference**, not a new R2; R1 remains authoritative.
 
+## Unified hosting and website integration proposal — 2026-11-07
+
+- **[MAXYRON Unified Website, Distributed Hosting and Infrastructure Integration](PROPOSAL-MAXYRON-HOSTING-AND-PLATFORM-INTEGRATION-2026-11-07.md):** defines how the existing MAXYRON Vercel-hosted corporate website can act as the public entry point to independently hosted products, approved research and domain mastery applications; why private infrastructure governance is not a public website; optional future product subdomains, shared learning portal, identity, integration contracts and rollout gates. The design does **not** configure DNS, create infrastructure repositories or deploy new applications, and retains R1 as current architecture.
+
 ## 2026-11-07 — Cross-product infrastructure and build-to-mastery proposal
 
 - **[MAXYRON Infrastructure Authority, Product Ownership and Build-to-Mastery Architecture](PROPOSAL-MAXYRON-INFRASTRUCTURE-AND-BUILD-TO-MASTERY-2026-11-07.md):** extends the earlier one-node decision into a proposed private, cross-product infrastructure/operations registry across ELAB-N01, AI Verification, SEKA, psychology and related applications. It specifies shared-versus-product ownership, a small candidate repository structure, system/learning identifiers, a build-to-mastery extraction contract and cautious migration gates. **No new repository has been created; existing owners and R1 remain authoritative.** It is a proposal for subsequent strategic reconciliation, not an implemented platform.
