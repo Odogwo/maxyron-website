@@ -95,7 +95,9 @@
         "Odogwo/Psychology-Knowledge-Mastery/README.md"
       ],
       "learning_owner": "Odogwo/Psychology-Knowledge-Mastery",
-      "next_gate": "Verify public deployment and rights/content/privacy; then test return navigation before adding an external link"
+      "next_gate": "Deferred until user resumes Psychology–MAXYRON integration; then verify deployment, permission/content/privacy and reciprocal navigation",
+      "integration_priority": "paused-by-user",
+      "paused_scope": "Corporate MAXYRON website integration only; independent application development is not paused"
     },
     {
       "system_id": "MX-APP-003",
@@ -157,7 +159,9 @@
         "Odogwo/SEKA/apps/web/app/page.tsx"
       ],
       "learning_owner": "Odogwo/maxyron-ai",
-      "next_gate": "Verify SEKA production hosting and identify an approved public-safe landing page; do not place protected research dashboard URLs in public records"
+      "next_gate": "Deferred until user resumes SEKA–MAXYRON integration; then verify public-safe landing, authentication/privacy and reciprocal navigation",
+      "integration_priority": "paused-by-user",
+      "paused_scope": "Corporate MAXYRON website integration only; independent application development is not paused"
     },
     {
       "system_id": "MX-APP-005",
