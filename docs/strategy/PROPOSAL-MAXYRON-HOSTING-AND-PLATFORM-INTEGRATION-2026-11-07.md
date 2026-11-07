@@ -155,3 +155,20 @@ Relevant official documentation:
 - https://vercel.com/docs/routing/rewrites
 
 **Smallest next implementation:** audit the existing public Products and Learning page links and classify deployed applications by user-accessibility, verified URL, authentication/privacy and readiness before implementing additional website links.
+
+## 2026-11-07 — User-confirmed one-website principle
+
+**Confirmed by user:** MAXYRON will have **one main corporate website** at `maxyron.com`; every other system, application and learning product remains independently developed and hosted, and connects back to the main website through an approved integration or navigation link.
+
+### Interpretation and authority
+- One website = one **central corporate entry point and brand/navigation owner**, not one server, one monorepo, one Vercel project, one URL origin, or a prohibition on independently hosted application websites.
+- Independent product applications may maintain their own sites, backend APIs, hosting, repositories, auth boundaries and release schedules. Their public-facing entry points should be discoverable from MAXYRON when verified and approved. Provide consistent return navigation to MAXYRON where appropriate.
+- Corporate sections `/products`, `/learning`, `/research` and `/services` catalogue verified offerings and direct users onward without absorbing product code into `maxyron-website`.
+- Any optional future branded product subdomains remain domain/DNS proposals, NOT required for the principle and NOT deployed by this decision.
+- ELAB-N01 is a **private** operational node; it may supply approved sanitized case studies, but should never be publicly linked to an internal IP, SSH service or admin dashboard.
+- Proposed private `maxyron-infrastructure` remains a cross-product operational **registry/control plane**, not a website-hosting platform by itself. Its creation and any migration require separate approval.
+- A product build can yield evidence-linked domain learning objects without transferring product ownership or claiming tested mastery. Learning delivery may be independent but accessible through the central website.
+
+**Status distinction:** This is a **user-confirmed integration/hosting principle** recorded as an addendum to the existing proposal. It does not itself activate R2, change DNS, deploy anything, create a repository or approve code migration. The existing R1 reconciled corporate strategy remains the current strategic authority until formal reconciliation.
+
+**Next implementation gate:** update the already existing MAXYRON integration registry's ownership and navigation standards, verify one independent product's main-site link and return link, then onboard other products based on actual readiness.
