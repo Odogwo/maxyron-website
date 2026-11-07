@@ -134,10 +134,10 @@
       "kind": "independent-product",
       "owner_repo": "Odogwo/SEKA",
       "hosting": {
-        "provider": "Vercel frontend and Render API (user-reported)",
-        "candidate_url": "https://seka-one.vercel.app/",
+        "provider": "external app/API hosting reported; provider and safe public landing unverified",
+        "candidate_url": null,
         "approved_public_url": null,
-        "evidence": "historical-user-report-not-currently-verified"
+        "evidence": "user-reported-runtime-not-publicly-verified"
       },
       "website_entry": {
         "website_route": "/products",
@@ -157,7 +157,7 @@
         "Odogwo/SEKA/apps/web/app/page.tsx"
       ],
       "learning_owner": "Odogwo/maxyron-ai",
-      "next_gate": "Reconcile SEKA own deployment status and confirm public-safe landing route without exposing research project metadata"
+      "next_gate": "Verify SEKA production hosting and identify an approved public-safe landing page; do not place protected research dashboard URLs in public records"
     },
     {
       "system_id": "MX-APP-005",
