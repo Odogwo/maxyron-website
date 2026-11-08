@@ -24,7 +24,7 @@ for (const { route, page } of routes) {
     if (!existsSync(stylesheet)) failures.push(`Missing page stylesheet: ${stylesheet}`);
     if (!source.includes(`'./${route.slice(1)}.css'`)) failures.push(`Missing CSS import: ${page}`);
   }
-  const nav = source.match(/<nav aria-label="Main navigation">[\\s\\S]*?<\\/nav>/)?.[0] ?? '';
+  const nav = source.match(/<nav aria-label="Main navigation">[\s\S]*?<\/nav>/)?.[0] ?? '';
   if (!nav.includes('href="mailto:hello@maxyron.com?subject=MAXYRON%20enquiry"')) {
     failures.push(`${page} main navigation must open the MAXYRON email composer directly`);
   }
