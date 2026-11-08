@@ -28,7 +28,7 @@ export default function LearningPage() {
       <h1>Knowledge that<br/><em>becomes capability.</em></h1>
       <p>MAXYRON explores learning systems that connect understanding, deliberate practice and evidence of independent performance. This page introduces developing and proposed learning areas, rather than an enrolment catalogue or accredited school.</p>
     </div></section>
-    <section className="shell learning-principles" aria-labelledby="learning-principles-title">
+    <section className="shell" aria-label="Spiritual Consciousness programme" style={{paddingTop:"2rem",paddingBottom:"2rem"}}><h2>Spiritual Consciousness</h2><p>Explore the developing MAXYRON programme connecting Bible knowledge, Scripture memory and disciplined spiritual reflection.</p><a href="/spiritual-consciousness">Explore Spiritual Consciousness</a></section>\n    <section className="shell learning-principles" aria-labelledby="learning-principles-title">
       <div><p className="eyebrow muted">OUR EDUCATIONAL VIEW</p><h2 id="learning-principles-title">Learning is a process.<br/>Mastery must be demonstrated.</h2></div>
       <div className="principle-list">
         <p><strong>Understand.</strong> Explain the concepts and mechanisms, not merely repeat definitions.</p>
