@@ -20,7 +20,7 @@ export async function handleLearningRequest(kind:'me'|'notes'|'events',method:'G
   const length=Number(request.headers.get('content-length')||0);
   if(length>32768) return respond({error:'request_too_large'},413);
   let body:unknown;
-  try {body=await request.json();}catch{return respond({error:'invalid_json'},400);}
+  try {const raw=await request.text();if(raw.length>32768)return respond({error:'request_too_large'},413);body=JSON.parse(raw);}catch{return respond({error:'invalid_json'},400);}
   if(kind==='notes'&&method==='POST'){
    const result=validateLearnerNoteInput(body);
    if(!result.ok) return respond({error:'invalid_note',details:result.errors},400);
