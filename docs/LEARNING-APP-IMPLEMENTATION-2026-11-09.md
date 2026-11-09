@@ -67,3 +67,6 @@ Added `app/learn/server/neon-auth-config.ts` (server-only configuration parser, 
 
 ## CI confirmation — 2026-11-09
 Commit `f0abac5f67c7a922ee5487df7fecd8a92803c701`: GitHub Actions `Learning Website Verification` run `42598131792` completed `success`; `MAXYRON Website CI` run `42598131718` completed `success`. Confirms the added Neon Auth configuration test runs in CI. Does not validate real user sessions, authentication token signature, or database RLS isolation.
+
+## Verified-session contract foundation
+Added `app/learn/server/session-claims.ts` and `scripts/test-learning-session-claims.mjs`; CI workflow updated at commit `68ab6d384d06b031480536b146c9997aef96ad10`. The validator checks claim shape, issuer, audience, expiration, issuance and not-before constraints **only after** a trusted signature/session verifier; it does not authenticate raw tokens. API routes remain disabled. Tests added to CI; check new workflow result before reporting pass. Next: determine Neon Auth actual session/token semantics and implement server-side signature verification plus active-session validation, without trusting request headers or client-supplied learner IDs.
