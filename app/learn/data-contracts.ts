@@ -33,5 +33,5 @@ export function validateLearningEventInput(value:unknown):ValidationResult<Learn
  if(!isRecord(value.payload)||JSON.stringify(value.payload).length>MAX_EVENT_PAYLOAD_BYTES)errors.push('invalid payload');
  if(Object.keys(value).some(k=>!['resourceRef','eventType','idempotencyKey','occurredAt','payload'].includes(k)))errors.push('unexpected field');
  if(errors.length)return {ok:false,errors};
- return {ok:true,value:value as LearningEventInput};
+ return {ok:true,value:{resourceRef:value.resourceRef as string,eventType:value.eventType as LearningEventInput['eventType'],idempotencyKey:value.idempotencyKey as string,occurredAt:value.occurredAt as string,payload:value.payload as Record<string,unknown>}};
 }
