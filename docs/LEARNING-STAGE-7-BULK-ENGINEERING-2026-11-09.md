@@ -68,3 +68,10 @@ Status: DEVELOPMENT BRANCH ONLY. No merge, production deployment, or live learne
 - Added a real PostgreSQL CI assertion in `tests/learning/rls-integration.sql` proving equivalent nested JSONB payloads compare equal regardless of key order, while materially different payloads do not.
 - The new SQL test's CI result is pending; prior green CI does not imply this new assertion passed. No real browser session or persistent write claimed.
 - Next activation dependency: encrypted branch-scoped Vercel credentials and protected preview live verification.
+
+## Stage 7C — failed CI diagnosis and repair
+- CI for SQL regression commit `2ecfad511422357e012049388d0ac59828868b4b`: Website CI run `42622235278` succeeded, Learning Website Verification run `42622235060` failed in `PostgreSQL learner isolation integration tests`.
+- Inspected job `129177030375` logs: PostgreSQL reported `syntax error at or near "$"` at `tests/learning/rls-integration.sql:70`. Source read-back showed the newly added block had `DO $` / `END $;` rather than valid matching delimiters.
+- Repaired the block with explicitly tagged `$jsonbtest$` delimiters and read the exact corrected file back from GitHub, commit `fea2c85cb4b063a1c5e7d2697e3142f76181667a`.
+- New CI runs `42632442253` (Learning Verification) and `42632442056` (Website CI) were queued when inspected. Do not mark green until verified.
+- Development preview backend remains disabled without securely injected branch-scoped credentials. No production modifications.
