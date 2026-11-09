@@ -46,3 +46,7 @@ Initial SDK install attempts at 0.7.0-beta, 0.5.0-beta and 0.2.0-beta.1 failed w
 - Existing `verify-learning-security.mjs` assumed the old disabled route implementation contained inline `status:503` and `no-store`. Updated to assert the shared gated API's `learningConfigured()`, no-store, and server session verification; this preserves the security intent without requiring duplicated guards in each route.
 - Restricted development runtime role previously had broad table privileges; migration 003 now explicitly REVOKEs all direct table privileges before granting only required operations.
 - New tests and Next.js build remain subject to the latest CI result; do not report green until read back.
+
+## Latest CI evidence
+- GitHub MAXYRON Website CI run `42615659707` passed after Next.js 16 upgrade and Neon Auth handler context fix.
+- Learning Website Verification run `42615659535` failed in PostgreSQL tests because the first RLS test left schema/policies committed, and the second test attempted to recreate the same function. Test runner corrected to use a separate disposable database for the provisioning test; rerun required.
