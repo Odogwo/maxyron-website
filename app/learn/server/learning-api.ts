@@ -9,6 +9,11 @@ export async function handleLearningRequest(kind:'me'|'notes'|'events',method:'G
  const identity=await resolveNeonLearner();
  if(!identity.authenticated) return respond({error:identity.reason==='not_configured'?'learner_backend_not_configured':'unauthenticated'},identity.reason==='not_configured'?503:401);
  const learner=identity.learner;
+ if(method==='POST'){
+  const origin=request.headers.get('origin');
+  const target=new URL(request.url).origin;
+  if(!origin||origin!==target) return respond({error:'origin_not_allowed'},403);
+ }
  try{
   if(kind==='me') return respond({learnerId:learner.learnerId,sessionExpiresAt:learner.sessionExpiresAt},200);
   if(kind==='notes'&&method==='GET'){
