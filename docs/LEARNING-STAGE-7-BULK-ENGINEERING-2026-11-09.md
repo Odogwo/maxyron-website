@@ -34,3 +34,14 @@ Status: DEVELOPMENT BRANCH ONLY. No merge, production deployment, or live learne
 - Shows only the number of notes returned by the capped list API (maximum 100), not an unverified global progress total.
 - Added `scripts/test-learning-overview.mjs` to Learning Verification CI.
 - No assessment score, mastery claim, code execution, course completion or credential is invented.
+
+## Vercel hosting audit — verified after team authorization
+- Connected Vercel team: `odogwos-projects` (`team_wJ39xbfeKyV06pk5GPsnZa8r`).
+- Project: `maxyron-website` (`prj_Pc5vSGkiB2BDbdbw7lCkOaA6IWuE`), framework Next.js; Vercel reports Node 26.x. Review compatibility against GitHub CI's Node 22 before live activation.
+- Verified configured domains: `maxyron.com`, `www.maxyron.com` (redirect to apex), `maxyron-website.vercel.app`. Production domains unchanged.
+- Vercel reports successful automatic branch preview builds. One inspected READY preview was `dpl_Dq5oWzPm9WGkmNmKsffpzHHVCgr9` for commit `d56398b0db13e6feb68c4ad6681ce46c8f7aea73`; this is not the latest Stage 7 source. Do not interpret READY as live auth success.
+- Read-only environment variable listing returned zero variables both project-wide and filtered to `feature/learning-shell-r1`. No secrets were decrypted.
+- Vercel deployment protection: SSO enabled for deployments other than custom domains. Preserve preview access protection.
+- **Activation blocker**: no scoped preview credentials, exact stable trusted preview origin or configured database URL. Never set the learner backend enabled flag alone or expose credentials in GitHub.
+- Do not register a per-commit random preview hostname as a permanent Neon Auth trusted origin. Prefer a verified stable branch alias or a dedicated development hostname, with an explicit narrow origin allowlist.
+- Next steps: align Node runtime; establish stable development preview; configure secret values only through Vercel secure environment management, preview/branch scoped; add exact origin to Neon Auth; test two real verified users. Production remains unchanged.
