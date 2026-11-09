@@ -53,3 +53,18 @@ Initial SDK install attempts at 0.7.0-beta, 0.5.0-beta and 0.2.0-beta.1 failed w
 
 ## CSRF and data input guard
 All learner POST operations now require an Origin header exactly matching the request origin; cross-origin and missing-origin POSTs fail closed with HTTP 403. JSON request bodies are length-limited and validated before database writes. This is a source-level implementation and must still be exercised by integration tests.
+
+## Verified Stage 6 results — development only
+- Latest code commit `0bd27732807f526e5978053d831d3131ed0b0b8c`: GitHub Learning Website Verification run `42616014154` **success**, MAXYRON Website CI run `42616014145` **success**. Includes CSRF origin guard, Next.js 16 compatibility, API/storage code and PostgreSQL test suite.
+- On Neon development branch `br-empty-bar-zan6axg9`, applied `002_owner_policies.sql` and `003_authenticated_provisioning.sql` equivalent statements in a single transaction. Production branch not targeted.
+- Neon read-back: six RLS policies (users SELECT/INSERT, enrollments SELECT, notes ALL, events SELECT/INSERT). Runtime grants narrowed to users SELECT/INSERT; enrollments SELECT; notes SELECT/INSERT/UPDATE; events SELECT/INSERT; no course access and no DELETE grants.
+- Runtime role `maxyron_learning_runtime_dev` read-back: `rolsuper=false`, `rolbypassrls=false`, `rolcreaterole=false`.
+- Development database `learning.users`, `learning.learner_notes`, `learning.learning_events` have zero records. Unauthenticated runtime role sees zero users and notes.
+- Disposable CI PostgreSQL tests cover two-user RLS isolation, forged ownership, anonymous deny, and event idempotency. They do not substitute for real Neon Auth browser sessions.
+
+## Remaining release blockers
+1. Configure exact development preview trusted origin in Neon Auth and secure deployment variables `NEON_AUTH_BASE_URL`, `NEON_AUTH_COOKIE_SECRET`, `LEARNING_DATABASE_URL` using the restricted role; do not enable production.
+2. Verify Neon Auth SDK `getSession()` behavior and revocation under live browser login/logout/email verification. A real session has not yet been exercised.
+3. Run two authenticated browser users through note create/read/update, event submission, cross-user denial, expired/revoked session, and pooled-connection isolation against the isolated development database.
+4. Verify deployment platform's secret handling and same-origin behavior; ensure no owner credentials in the application.
+5. Review Next.js 16 upgrade compatibility and final security review before any merge or production deployment.
