@@ -21,3 +21,6 @@ No private learner data, credentials, or operational ELAB content belongs in the
 
 ## Executable validation tests
 Added `scripts/test-learning-data-contracts.mjs` to exercise the actual TypeScript validation functions through TypeScript transpilation in the Node CI job. It tests valid notes/events, forged owner IDs, invalid paths, excessive payloads, invalid event types, versions and dates. These tests are distinct from the earlier source-marker checks. This does not implement session verification or persistent storage. Observe CI results before claiming the new tests passed.
+
+## Server adapter interfaces
+`app/learn/server/identity.ts` defines verified identity results and a deny-by-default disabled adapter. `app/learn/server/storage.ts` defines typed note/event persistence methods that require a verified learner object, plus an unavailable implementation. `scripts/test-learning-backend-boundaries.mjs` checks source-level invariants in CI. These are not yet wired to real provider sessions or SQL storage. No production identity or database credentials were created or accessed.
