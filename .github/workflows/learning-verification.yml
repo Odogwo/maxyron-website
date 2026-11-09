@@ -71,6 +71,8 @@ jobs:
         run: node scripts/test-learning-overview.mjs
       - name: Verify journal authenticated integration boundaries
         run: node scripts/test-learning-journal-integration.mjs
+      - name: Verify semantic JSONB idempotency guard
+        run: node scripts/test-learning-idempotency-jsonb.mjs
       - name: Verify learner data integrity boundaries
         run: node scripts/test-learning-integrity.mjs
       - name: Verify development readiness and secret-free diagnostics
