@@ -84,7 +84,8 @@ jobs:
           sudo apt-get update -qq
           sudo apt-get install -y postgresql-client
           psql -h localhost -U postgres -d learning_test -v ON_ERROR_STOP=1 -f tests/learning/rls-integration.sql
-          psql -h localhost -U postgres -d learning_test -v ON_ERROR_STOP=1 -f tests/learning/rls-provisioning.sql
+          psql -h localhost -U postgres -d postgres -v ON_ERROR_STOP=1 -c 'CREATE DATABASE learning_provisioning_test'
+          psql -h localhost -U postgres -d learning_provisioning_test -v ON_ERROR_STOP=1 -f tests/learning/rls-provisioning.sql
       - name: TypeScript verification
         run: npx tsc --noEmit
       - name: Next.js production build
