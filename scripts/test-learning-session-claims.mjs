@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {createRequire} from 'node:module';
+import {runInNewContext} from 'node:vm';
+const require=createRequire(import.meta.url);
+const ts=require('typescript');
+const code=ts.transpileModule(readFileSync('app/learn/server/session-claims.ts','utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText;
+const exports={};runInNewContext(code,{exports,Number,Object});
+const validate=exports.validateVerifiedSessionClaims;
+const expected={issuer:'https://auth.example.test',audience:'learning'};
+const now=1800000000;
+const valid={sub:'provider-subject-1',iss:expected.issuer,aud:expected.audience,exp:now+3600,iat:now-30};
+assert.equal(validate(valid,expected,now).subject,valid.sub);
+for(const bad of [null,{}, {...valid,sub:''},{...valid,iss:'https://evil.example'},{...valid,aud:'other'},{...valid,aud:['learning']},{...valid,exp:now},{...valid,iat:now+120},{...valid,nbf:now+1}])assert.equal(validate(bad,expected,now),null,'invalid session claims must fail');
+console.log('PASS: post-verification session claim contract rejects malformed and expired claims.');
