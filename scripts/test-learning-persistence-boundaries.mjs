@@ -16,6 +16,7 @@ assert.match(storage,/client\.release\(\)/);
 assert.match(storage,/ON CONFLICT \(user_id,idempotency_key\) DO NOTHING/);
 assert.match(api,/validateLearnerNoteInput/);
 assert.match(api,/validateLearningEventInput/);
+assert.match(api,/origin_not_allowed/,'CSRF origin check required');
 assert.match(migration,/learner_provision_self/);
 assert.match(migration,/auth_subject=learning\.current_verified_subject\(\)/);
 console.log('PASS: authenticated storage source boundaries and RLS migration invariants');
