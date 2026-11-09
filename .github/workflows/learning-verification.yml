@@ -6,6 +6,7 @@ on:
   pull_request:
     paths:
       - 'app/learn/**'
+      - 'app/api/learning/**'
       - 'scripts/verify-learning-shell.mjs'
       - '.github/workflows/learning-verification.yml'
       - 'package.json'
