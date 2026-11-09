@@ -1,18 +1,13 @@
 import 'server-only';
 import { createNeonAuth } from '@neondatabase/auth/next/server';
 import { createHash } from 'node:crypto';
+import { inspectLearningReadiness } from './learning-readiness';
 import type { VerifiedLearner, LearnerIdentityResult } from './identity';
 /** Provider session is checked server-side for every learner operation.
  * No client-supplied subject or user ID is trusted.
  */
-export function learningConfigured(env=process.env):boolean {
- const url=env.NEON_AUTH_BASE_URL;
- const secret=env.NEON_AUTH_COOKIE_SECRET;
- return env.LEARNING_BACKEND_ENABLED==='true' &&
-  typeof url==='string' && /^https:\/\/[^/]+\/.+/.test(url) &&
-  typeof secret==='string' && secret.length>=32 &&
-  typeof env.LEARNING_DATABASE_URL==='string' &&
-  env.LEARNING_DATABASE_URL.includes('sslmode=verify-full');
+export function learningConfigured(env:NodeJS.ProcessEnv=process.env):boolean {
+ return inspectLearningReadiness(env).ready;
 }
 export function learnerUuid(subject:string):string {
  const hash=createHash('sha256').update('maxyron-learning:neon-auth:v1:').update(subject).digest('hex');
