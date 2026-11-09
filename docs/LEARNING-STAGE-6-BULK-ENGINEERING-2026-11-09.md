@@ -40,3 +40,9 @@ Date: 2026-11-09. Scope: development only. No production merge or deployment.
 
 ## CI dependency incident
 Initial SDK install attempts at 0.7.0-beta, 0.5.0-beta and 0.2.0-beta.1 failed with npm ERESOLVE: SDK peer requires Next.js 16 while website used Next.js 15. We did not use --force or --legacy-peer-deps. A Next.js 16 upgrade was committed to the development branch; it is conditional on full route/build/security CI. This is a compatibility intervention, not a validated production upgrade.
+
+## Build and security-test repair log
+- Initial Next.js 16 build reached TypeScript and failed because Neon Auth proxy handler requires a route context argument. Fixed by forwarding the Next.js catch-all context to GET/POST handlers.
+- Existing `verify-learning-security.mjs` assumed the old disabled route implementation contained inline `status:503` and `no-store`. Updated to assert the shared gated API's `learningConfigured()`, no-store, and server session verification; this preserves the security intent without requiring duplicated guards in each route.
+- Restricted development runtime role previously had broad table privileges; migration 003 now explicitly REVOKEs all direct table privileges before granting only required operations.
+- New tests and Next.js build remain subject to the latest CI result; do not report green until read back.
