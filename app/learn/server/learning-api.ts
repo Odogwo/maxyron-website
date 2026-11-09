@@ -35,7 +35,8 @@ export async function handleLearningRequest(kind:'me'|'notes'|'events',method:'G
   if(kind==='events'&&method==='POST'){
    const result=validateLearningEventInput(body);
    if(!result.ok) return respond({error:'invalid_event',details:result.errors},400);
-   return respond({event:await postgresLearnerStorage.recordEvent(learner,result.value)},200);
+   try{return respond({event:await postgresLearnerStorage.recordEvent(learner,result.value)},200);}
+   catch(e){if(e instanceof Error&&e.message==='event_idempotency_conflict')return respond({error:'event_idempotency_conflict'},409);throw e;}
   }
   return respond({error:'method_not_allowed'},405);
  }catch{return respond({error:'learner_operation_failed'},503);}
