@@ -1,8 +1,4 @@
-import { NextResponse } from 'next/server';
-export const dynamic = 'force-dynamic';
-export function POST(){
- return NextResponse.json(
-  {error:'learner_events_not_configured',message:'Authenticated event ingestion is not enabled.'},
-  {status:503,headers:{'Cache-Control':'no-store','X-Content-Type-Options':'nosniff'}}
- );
-}
+import {handleLearningRequest} from '@/app/learn/server/learning-api';
+export const dynamic='force-dynamic';
+export const runtime='nodejs';
+export async function POST(request:Request){return handleLearningRequest('events','POST',request);}
