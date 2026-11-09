@@ -64,3 +64,6 @@ On development branch `br-empty-bar-zan6axg9` updated and read-back verified ema
 
 ## Website Neon Auth configuration foundation — 2026-11-09
 Added `app/learn/server/neon-auth-config.ts` (server-only configuration parser, disabled by default, requires explicit backend enablement, HTTPS issuer/JWKS, same-origin JWKS within issuer path, audience) and `scripts/test-learning-neon-auth-config.mjs` (executable positive/negative test cases). These files are committed to `feature/learning-shell-r1`; they do not enable sessions, login, storage or deployment. Tests are authored but have not yet been executed or wired into CI. Next: integrate tests into CI, confirm token format and issuer/audience semantics for Neon Auth, implement trusted session verification with expiry/revocation checks, map provider subject to learner UUID, then apply RLS policies and run two-user isolation tests. Keep API fail-closed until complete.
+
+## CI confirmation — 2026-11-09
+Commit `f0abac5f67c7a922ee5487df7fecd8a92803c701`: GitHub Actions `Learning Website Verification` run `42598131792` completed `success`; `MAXYRON Website CI` run `42598131718` completed `success`. Confirms the added Neon Auth configuration test runs in CI. Does not validate real user sessions, authentication token signature, or database RLS isolation.
