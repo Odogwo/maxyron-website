@@ -28,3 +28,6 @@ No authentication, learner accounts, database, server APIs, session persistence,
 
 ## Guardrails
 No changes to `main` or the production homepage in this stage. Branch-only source changes do not prove deployment. Preserve canonical educational and infrastructure authority. Never expose private ELAB runtime details or keys.
+
+## Increment — reusable interactive workspace component
+Added `app/learn/WorkspacePreview.tsx` and wired it to all nine dynamic area pages. The client-side module selector, controlled notes textarea, draft-length check, clear action and accessible feedback are demonstrable UI behaviors only. Notes are ephemeral and intentionally not persisted. Responsive module navigation and focus-visible styling were added to `app/learn/learning.module.css`. This is UI scaffolding, not an assessment engine or database. Pending: build/lint/browser verification, backend architecture and identity boundaries.
