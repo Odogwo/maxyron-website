@@ -75,3 +75,10 @@ Status: DEVELOPMENT BRANCH ONLY. No merge, production deployment, or live learne
 - Repaired the block with explicitly tagged `$jsonbtest$` delimiters and read the exact corrected file back from GitHub, commit `fea2c85cb4b063a1c5e7d2697e3142f76181667a`.
 - New CI runs `42632442253` (Learning Verification) and `42632442056` (Website CI) were queued when inspected. Do not mark green until verified.
 - Development preview backend remains disabled without securely injected branch-scoped credentials. No production modifications.
+
+## Stage 7C — verified CI closure and safe Vercel configuration
+- GitHub CI for repaired SQL commit `fea2c85cb4b063a1c5e7d2697e3142f76181667a` completed success in both workflows: Learning Website Verification run `42632442253`; MAXYRON Website CI run `42632442056`.
+- Vercel development branch environment was initially empty. Added and read back **three encrypted, Preview-only, branch-scoped settings** on `feature/learning-shell-r1`: `LEARNING_BACKEND_ENABLED=false`, `LEARNING_DEPLOYMENT_TIER=development`, and `NEON_AUTH_BASE_URL` pointing to the existing Neon development Auth endpoint. The read-back verified keys, scope and encryption type only; secret values were not disclosed.
+- Neon development Auth read-back confirmed the branch preview hostname in trusted origins, with OTP email verification required.
+- Backend deliberately remains **disabled**: `LEARNING_DATABASE_URL` and `NEON_AUTH_COOKIE_SECRET` are not configured. Do not set `LEARNING_BACKEND_ENABLED=true` or assert live authentication/persistence until both are securely provisioned, reviewed and tested.
+- No Vercel production variables, production domains, Neon production branch or GitHub main branch modified. Changes to Vercel env apply to future deployments; no redeployment or live readiness validation claimed.
