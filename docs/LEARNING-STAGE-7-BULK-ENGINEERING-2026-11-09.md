@@ -61,3 +61,10 @@ Status: DEVELOPMENT BRANCH ONLY. No merge, production deployment, or live learne
 - Vercel preview remains SSO protected. Project environment listing remains empty: backend is not enabled and real sessions are not yet testable. Do not claim authentication or persistence E2E passed.
 - Repaired duplicate-event idempotency payload comparison to use PostgreSQL JSONB equality rather than JavaScript object key order; added static regression guard `scripts/test-learning-idempotency-jsonb.mjs` to Learning Website Verification CI.
 - Still required: provision restricted Neon development database connection URL and a random cookie secret into **branch-scoped encrypted Vercel Preview environment variables**, along with development-only activation settings. Do not copy or expose secrets in GitHub/chat. Redeploy a reviewed preview after secure injection and verify readiness, OTP email and two-user isolation.
+
+## Stage 7B — CI closure and SQL regression strengthening
+- Read back workflow results for commit `f44e45edd93ef9588f5b5aa4cd553435fde8417e`: `MAXYRON Website CI` run `42621419040` completed success and `Learning Website Verification` run `42621419021` completed success.
+- Reviewed actual learning API and journal response shapes; `/api/learning/notes` returns `{notes}` and `{note}` matching the UI. Confirmed POST requires same-origin and verified learner identity before database access.
+- Added a real PostgreSQL CI assertion in `tests/learning/rls-integration.sql` proving equivalent nested JSONB payloads compare equal regardless of key order, while materially different payloads do not.
+- The new SQL test's CI result is pending; prior green CI does not imply this new assertion passed. No real browser session or persistent write claimed.
+- Next activation dependency: encrypted branch-scoped Vercel credentials and protected preview live verification.
