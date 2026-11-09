@@ -18,3 +18,6 @@ A production identity provider and PostgreSQL host have **not** been selected or
 7. Activate notes/events for preview users only; keep production gated.
 
 No private learner data, credentials, or operational ELAB content belongs in the public source repository.
+
+## Executable validation tests
+Added `scripts/test-learning-data-contracts.mjs` to exercise the actual TypeScript validation functions through TypeScript transpilation in the Node CI job. It tests valid notes/events, forged owner IDs, invalid paths, excessive payloads, invalid event types, versions and dates. These tests are distinct from the earlier source-marker checks. This does not implement session verification or persistent storage. Observe CI results before claiming the new tests passed.
