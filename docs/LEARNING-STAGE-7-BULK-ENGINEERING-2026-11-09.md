@@ -54,3 +54,10 @@ Status: DEVELOPMENT BRANCH ONLY. No merge, production deployment, or live learne
 - Neon development Auth config read-back: `trusted_origins=[]`, `allow_localhost=true`, email/password enabled with OTP verification required. No origin modified.
 - Do not add per-commit preview URLs to Neon trusted origins. Require verified stable branch domain or isolated development domain before enabling backend and registering an origin.
 - No project settings, environment secrets, Neon Auth settings, production deployments or domains modified during this read-only audit.
+
+## Stage 7B — stable origin activation and regression repair
+- Verified Vercel branch alias through both project alias list and deployment alias list: `https://maxyron-website-git-feature-learning-shell-r1-odogwos-projects.vercel.app`, pointing to a READY development deployment. This is a stable branch-specific origin, not a per-commit hostname.
+- Added this exact HTTPS origin to Neon Auth **development branch only** (`br-empty-bar-zan6axg9`) with `better_auth`. Read-back through `list_auth_trusted_domains` confirmed the entry. No production Neon branch or Vercel production alias changed.
+- Vercel preview remains SSO protected. Project environment listing remains empty: backend is not enabled and real sessions are not yet testable. Do not claim authentication or persistence E2E passed.
+- Repaired duplicate-event idempotency payload comparison to use PostgreSQL JSONB equality rather than JavaScript object key order; added static regression guard `scripts/test-learning-idempotency-jsonb.mjs` to Learning Website Verification CI.
+- Still required: provision restricted Neon development database connection URL and a random cookie secret into **branch-scoped encrypted Vercel Preview environment variables**, along with development-only activation settings. Do not copy or expose secrets in GitHub/chat. Redeploy a reviewed preview after secure injection and verify readiness, OTP email and two-user isolation.
