@@ -40,3 +40,6 @@ Added public read-only `/api/learning/catalog` and `/api/learning/health` Next.j
 
 ## Authenticated workflow foundation
 Previous commit `02a4f4d` returned successful Vercel and two successful GitHub Actions workflows. New branch work adds PostgreSQL schema draft `db/learning/001_initial.sql` and explicitly unavailable, no-write learner API endpoints `/api/learning/me`, `/api/learning/notes` and `/api/learning/events`. Security design in `docs/LEARNING-AUTHENTICATED-VERTICAL-SLICE.md`. The SQL has not been applied and identity/storage are not connected. New commits require fresh CI verification.
+
+## Security verification and RLS policy design
+Prior commit `7200ab8` passed Vercel and two GitHub Actions runs. Added draft owner policies `db/learning/002_owner_policies.sql`, source-level checks `scripts/verify-learning-security.mjs`, and `docs/LEARNING-SECURITY-TEST-PLAN.md`. CI now executes the security source checks. These are design/static checks only; no SQL migration, authenticated runtime or integration isolation test has run. New commits require independent CI results.
