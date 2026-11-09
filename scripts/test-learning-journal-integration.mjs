@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+const component=readFileSync('app/learn/LearnerJournal.tsx','utf8');
+const route=readFileSync('app/learn/[area]/page.tsx','utf8');
+assert.match(component,/\/api\/learning\/me/);
+assert.match(component,/\/api\/learning\/notes/);
+assert.match(component,/response\.status===409/);
+assert.match(component,/credentials:'same-origin'/);
+assert.match(component,/No note has been saved/);
+assert.match(route,/LearnerJournal/);
+console.log('PASS: journal integrates gated authenticated notes API with explicit unavailable states');
