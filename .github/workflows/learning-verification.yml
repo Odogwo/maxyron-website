@@ -67,6 +67,8 @@ jobs:
         run: node scripts/test-learning-neon-auth-config.mjs
       - name: Exercise verified session claim contract tests
         run: node scripts/test-learning-session-claims.mjs
+      - name: Verify learner data integrity boundaries
+        run: node scripts/test-learning-integrity.mjs
       - name: Verify development readiness and secret-free diagnostics
         run: node scripts/test-learning-readiness.mjs
       - name: Verify persistence security boundaries
