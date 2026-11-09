@@ -17,7 +17,7 @@ Date: 2026-11-09. Scope: development only. No production merge or deployment.
 - `app/learn/auth-client.ts`, `app/learn/sign-in/page.tsx`, `app/learn/sign-up/page.tsx`: initial sign-in and registration screens. These are not evidence of functioning login.
 - `db/learning/003_authenticated_provisioning.sql`: development runtime-role grants and self-provisioning policy; must apply after 002 and only when validated.
 - `tests/learning/rls-provisioning.sql`, `scripts/test-learning-persistence-boundaries.mjs`: two-learner database isolation and source-boundary tests. CI updated.
-- `package.json`: pin `@neondatabase/auth@0.5.0-beta` to avoid Next.js 16 peer constraint in newer SDK, add `pg` and `@types/pg`.
+- `package.json`: pin `@neondatabase/auth@0.7.0-beta`, add `pg` and `@types/pg`. All attempted SDK releases rejected Next.js 15 via peer dependency constraints; development-only Next.js 16.4.5 upgrade is now under CI validation. No production upgrade authorized.
 
 ## Safety and known constraints
 - Runtime must use dedicated `maxyron_learning_runtime_dev` role, NEVER `neondb_owner`.
@@ -37,3 +37,6 @@ Date: 2026-11-09. Scope: development only. No production merge or deployment.
 4. Configure verified development preview origin and secret in secure deployment settings; no secrets in Git.
 5. Real user A and user B sign in and confirm own-note persistence, cross-user denial, expired/revoked session rejection, and reconnect isolation.
 6. Final review before any merge or deployment.
+
+## CI dependency incident
+Initial SDK install attempts at 0.7.0-beta, 0.5.0-beta and 0.2.0-beta.1 failed with npm ERESOLVE: SDK peer requires Next.js 16 while website used Next.js 15. We did not use --force or --legacy-peer-deps. A Next.js 16 upgrade was committed to the development branch; it is conditional on full route/build/security CI. This is a compatibility intervention, not a validated production upgrade.
