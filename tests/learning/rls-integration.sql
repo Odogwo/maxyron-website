@@ -66,7 +66,7 @@ END $$;
 RESET ROLE;
 -- PostgreSQL JSONB treats semantically identical object payloads as equal,
 -- regardless of JSON object property order. This is the runtime idempotency rule.
-DO $
+DO $jsonbtest$
 DECLARE payload jsonb := '{"lesson":"intro","result":{"score":2,"passed":true}}'::jsonb;
 BEGIN
  IF NOT (payload = '{"result":{"passed":true,"score":2},"lesson":"intro"}'::jsonb) THEN
@@ -75,6 +75,6 @@ BEGIN
  IF payload = '{"lesson":"intro","result":{"score":3,"passed":true}}'::jsonb THEN
   RAISE EXCEPTION 'Different JSONB event payloads compared equal';
  END IF;
-END $;
+END $jsonbtest$;
 ROLLBACK;
 \echo PASS: PostgreSQL owner isolation, anonymous deny, forged ownership and event idempotency
