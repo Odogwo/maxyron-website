@@ -1,13 +1,14 @@
 import 'server-only';
 import { Pool, type PoolClient } from 'pg';
 import { randomUUID } from 'node:crypto';
+import { learningConfigured } from './neon-session';
 import type { VerifiedLearner } from './identity';
 import type { LearnerStorage, StoredLearnerNote, StoredLearningEvent } from './storage';
 import type { LearnerNoteInput, LearningEventInput } from '../data-contracts';
 let pool:Pool|undefined;
 function getPool():Pool {
  const url=process.env.LEARNING_DATABASE_URL;
- if(process.env.LEARNING_BACKEND_ENABLED!=='true'||!url||!url.includes('sslmode=verify-full')) throw new Error('learner_database_unavailable');
+ if(!learningConfigured()||!url) throw new Error('learner_database_unavailable');
  return pool??(pool=new Pool({connectionString:url,max:5,connectionTimeoutMillis:5000,idleTimeoutMillis:10000}));
 }
 async function inLearnerTransaction<T>(learner:VerifiedLearner,action:(client:PoolClient)=>Promise<T>):Promise<T> {
@@ -46,7 +47,8 @@ export const postgresLearnerStorage:LearnerStorage={
     if(r.rowCount!==1) throw new Error('note_version_conflict');
     return note(r.rows[0]);
    }
-   const r=await client.query('INSERT INTO learning.learner_notes(id,user_id,resource_ref,content) VALUES($1,$2,$3,$4) RETURNING id,resource_ref,content,version,updated_at',[randomUUID(),learner.learnerId,input.resourceRef,input.content]);
+   const r=await client.query('INSERT INTO learning.learner_notes(id,user_id,resource_ref,content) VALUES($1,$2,$3,$4) ON CONFLICT (user_id,resource_ref) DO NOTHING RETURNING id,resource_ref,content,version,updated_at',[randomUUID(),learner.learnerId,input.resourceRef,input.content]);
+   if(r.rowCount!==1) throw new Error('note_version_conflict');
    return note(r.rows[0]);
   });
  },
@@ -54,9 +56,11 @@ export const postgresLearnerStorage:LearnerStorage={
   return inLearnerTransaction(learner,async client=>{
    const r=await client.query('INSERT INTO learning.learning_events(id,user_id,resource_ref,event_type,idempotency_key,occurred_at,payload) VALUES($1,$2,$3,$4,$5,$6,$7) ON CONFLICT (user_id,idempotency_key) DO NOTHING RETURNING id,resource_ref,event_type,occurred_at',[randomUUID(),learner.learnerId,input.resourceRef,input.eventType,input.idempotencyKey,input.occurredAt,JSON.stringify(input.payload)]);
    if(r.rowCount===1) return event(r.rows[0]);
-   const existing=await client.query('SELECT id,resource_ref,event_type,occurred_at FROM learning.learning_events WHERE user_id=$1 AND idempotency_key=$2',[learner.learnerId,input.idempotencyKey]);
+   const existing=await client.query('SELECT id,resource_ref,event_type,occurred_at,payload FROM learning.learning_events WHERE user_id=$1 AND idempotency_key=$2',[learner.learnerId,input.idempotencyKey]);
    if(existing.rowCount!==1) throw new Error('event_idempotency_failed');
-   return event(existing.rows[0]);
+   const prior=existing.rows[0];
+   if(prior.resource_ref!==input.resourceRef||prior.event_type!==input.eventType||new Date(prior.occurred_at).getTime()!==new Date(input.occurredAt).getTime()||JSON.stringify(prior.payload)!==JSON.stringify(input.payload)) throw new Error('event_idempotency_conflict');
+   return event(prior);
   });
  }
 };
