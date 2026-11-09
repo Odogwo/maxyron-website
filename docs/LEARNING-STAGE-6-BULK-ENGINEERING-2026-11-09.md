@@ -50,3 +50,6 @@ Initial SDK install attempts at 0.7.0-beta, 0.5.0-beta and 0.2.0-beta.1 failed w
 ## Latest CI evidence
 - GitHub MAXYRON Website CI run `42615659707` passed after Next.js 16 upgrade and Neon Auth handler context fix.
 - Learning Website Verification run `42615659535` failed in PostgreSQL tests because the first RLS test left schema/policies committed, and the second test attempted to recreate the same function. Test runner corrected to use a separate disposable database for the provisioning test; rerun required.
+
+## CSRF and data input guard
+All learner POST operations now require an Origin header exactly matching the request origin; cross-origin and missing-origin POSTs fail closed with HTTP 403. JSON request bodies are length-limited and validated before database writes. This is a source-level implementation and must still be exercised by integration tests.
