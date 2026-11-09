@@ -24,3 +24,6 @@ The `002_owner_policies.sql` file is a template, **not applied**. The `app.verif
 
 ## Verification scope
 `scripts/verify-learning-security.mjs` performs source-level invariants only. It cannot prove database policy correctness, session security or isolation. Do not deploy the SQL or enable write endpoints until the tests above are exercised against a development database with verified auth.
+
+## Disposable PostgreSQL CI integration harness
+Added `tests/learning/rls-integration.sql` and PostgreSQL 16 service to `.github/workflows/learning-verification.yml`. The test applies draft migrations in a disposable CI database, creates a restricted role, verifies anonymous default denial, two-user note isolation, blocked cross-user update, blocked forged ownership insert and duplicate event key rejection. Test transaction rolls back fixtures. This test does not provision production storage or validate any identity provider; a database setting alone is not a trusted identity. CI results must be inspected before claiming tests passed.
