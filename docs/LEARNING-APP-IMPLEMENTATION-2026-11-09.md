@@ -37,3 +37,6 @@ Added `scripts/verify-learning-shell.mjs` for route registry and component-contr
 
 ## Read-only API and backend boundary scaffold
 Added public read-only `/api/learning/catalog` and `/api/learning/health` Next.js route handlers. They return static architectural metadata, explicitly state preview status, and do not accept writes or expose learner data. Added `docs/LEARNING-DATA-AND-IDENTITY-BOUNDARIES.md` to define proposed identity, persistence, authorization, privacy and migration gates before real learner records. Updated Learning CI path triggers for the API. These changes do not establish authentication or persistence. The earlier corporate build audit succeeded and Learning workflow's route/TypeScript checks succeeded while its build was still running at observation time; new commits require fresh verification.
+
+## Authenticated workflow foundation
+Previous commit `02a4f4d` returned successful Vercel and two successful GitHub Actions workflows. New branch work adds PostgreSQL schema draft `db/learning/001_initial.sql` and explicitly unavailable, no-write learner API endpoints `/api/learning/me`, `/api/learning/notes` and `/api/learning/events`. Security design in `docs/LEARNING-AUTHENTICATED-VERTICAL-SLICE.md`. The SQL has not been applied and identity/storage are not connected. New commits require fresh CI verification.
