@@ -16,7 +16,7 @@ export function learningConfigured(env=process.env):boolean {
 }
 export function learnerUuid(subject:string):string {
  const hash=createHash('sha256').update('maxyron-learning:neon-auth:v1:').update(subject).digest('hex');
- return hash.slice(0,8)+'-'+hash.slice(8,12)+'-5'+hash.slice(13,16)+'-a'+hash.slice(17,20)+'-'+hash.slice(20,32);
+ return hash.slice(0,8)+'-'+hash.slice(8,12)+'-8'+hash.slice(13,16)+'-a'+hash.slice(17,20)+'-'+hash.slice(20,32);
 }
 export async function resolveNeonLearner():Promise<LearnerIdentityResult> {
  if(!learningConfigured()) return {authenticated:false,reason:'not_configured'};
@@ -25,7 +25,7 @@ export async function resolveNeonLearner():Promise<LearnerIdentityResult> {
   const response=await auth.getSession();
   const user=response.data?.user;
   const session=response.data?.session;
-  if(response.error || !user || !session || typeof user.id!=='string' || !user.id || !session.expiresAt) return {authenticated:false,reason:'unauthenticated'};
+  if(response.error || !user || !session || user.emailVerified!==true || typeof user.id!=='string' || !user.id || !session.expiresAt) return {authenticated:false,reason:'unauthenticated'};
   const expiry=new Date(session.expiresAt).getTime();
   if(!Number.isFinite(expiry)||expiry<=Date.now()) return {authenticated:false,reason:'expired'};
   const learner:VerifiedLearner={learnerId:learnerUuid(user.id),providerSubject:user.id,sessionExpiresAt:new Date(expiry).toISOString()};
