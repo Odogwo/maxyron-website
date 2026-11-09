@@ -28,3 +28,9 @@ Status: DEVELOPMENT BRANCH ONLY. No merge, production deployment, or live learne
 - Resolve CI failures if any.
 - Add additional development-only learner dashboard and activity UI after confirming the existing API contracts.
 - Request the actual development preview hostname and hosting integration only if unavailable from connected infrastructure; never request secrets in chat.
+
+## Stage 7E — authenticated dashboard integration
+- Added `app/learn/LearnerOverview.tsx` to the `/learn` dashboard. Reads verified learner session and private notes through same-origin no-store APIs; displays an explicit disabled/signed-out/error state instead of invented progress.
+- Shows only the number of notes returned by the capped list API (maximum 100), not an unverified global progress total.
+- Added `scripts/test-learning-overview.mjs` to Learning Verification CI.
+- No assessment score, mastery claim, code execution, course completion or credential is invented.
