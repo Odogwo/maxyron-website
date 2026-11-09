@@ -16,6 +16,8 @@ on:
       - 'scripts/test-learning-disabled-adapters.mjs'
       - 'scripts/test-learning-neon-auth-config.mjs'
       - 'scripts/test-learning-session-claims.mjs'
+      - 'scripts/test-learning-persistence-boundaries.mjs'
+      - 'db/learning/003_authenticated_provisioning.sql'
       - 'scripts/check-learning-environment.mjs'
       - '.env.learning.example'
       - 'scripts/verify-learning-shell.mjs'
@@ -65,6 +67,8 @@ jobs:
         run: node scripts/test-learning-neon-auth-config.mjs
       - name: Exercise verified session claim contract tests
         run: node scripts/test-learning-session-claims.mjs
+      - name: Verify persistence security boundaries
+        run: node scripts/test-learning-persistence-boundaries.mjs
       - name: Check disabled backend environment defaults
         run: node scripts/check-learning-environment.mjs
       - name: Verify incomplete enabled backend configuration fails closed
@@ -80,6 +84,7 @@ jobs:
           sudo apt-get update -qq
           sudo apt-get install -y postgresql-client
           psql -h localhost -U postgres -d learning_test -v ON_ERROR_STOP=1 -f tests/learning/rls-integration.sql
+          psql -h localhost -U postgres -d learning_test -v ON_ERROR_STOP=1 -f tests/learning/rls-provisioning.sql
       - name: TypeScript verification
         run: npx tsc --noEmit
       - name: Next.js production build
