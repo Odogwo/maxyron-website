@@ -13,6 +13,8 @@ on:
       - 'scripts/verify-learning-data-contracts.mjs'
       - 'scripts/test-learning-data-contracts.mjs'
       - 'scripts/test-learning-backend-boundaries.mjs'
+      - 'scripts/check-learning-environment.mjs'
+      - '.env.learning.example'
       - 'scripts/verify-learning-shell.mjs'
       - '.github/workflows/learning-verification.yml'
       - 'package.json'
@@ -54,6 +56,14 @@ jobs:
         run: node scripts/test-learning-data-contracts.mjs
       - name: Verify learner backend adapter boundaries
         run: node scripts/test-learning-backend-boundaries.mjs
+      - name: Check disabled backend environment defaults
+        run: node scripts/check-learning-environment.mjs
+      - name: Verify incomplete enabled backend configuration fails closed
+        run: |
+          if LEARNING_BACKEND_ENABLED=true node scripts/check-learning-environment.mjs; then
+            echo 'Expected configuration preflight to reject missing credentials' >&2
+            exit 1
+          fi
       - name: PostgreSQL learner isolation integration tests
         env:
           PGPASSWORD: test-only-password
