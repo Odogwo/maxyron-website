@@ -68,3 +68,11 @@ All learner POST operations now require an Origin header exactly matching the re
 3. Run two authenticated browser users through note create/read/update, event submission, cross-user denial, expired/revoked session, and pooled-connection isolation against the isolated development database.
 4. Verify deployment platform's secret handling and same-origin behavior; ensure no owner credentials in the application.
 5. Review Next.js 16 upgrade compatibility and final security review before any merge or production deployment.
+
+## Stage 6H — development activation safeguards
+- Added `app/learn/server/learning-readiness.ts` with strict HTTPS auth URL, nonempty verified-TLS PostgreSQL URL, >=32-character cookie secret, enabled flag and explicit `LEARNING_DEPLOYMENT_TIER=development` gate.
+- `learningConfigured()` now delegates to the same readiness gate; production tier cannot activate learner persistence using this branch's code.
+- Added `/api/learning/readiness`: reports only boolean readiness checks; no secret values or connection URLs. Returns HTTP 503 when incomplete and disables caching.
+- Added source-level readiness checks to Learning Website Verification CI and updated example environment file.
+- No actual hosting secrets or trusted preview origin were supplied through the available connectors. No browser accounts or external emails were created. No login or end-to-end persistence claims.
+- Activation remains blocked until a real development deployment with securely injected secrets and exact trusted origin is available.
