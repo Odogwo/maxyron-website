@@ -12,6 +12,7 @@ on:
       - 'scripts/verify-learning-security.mjs'
       - 'scripts/verify-learning-data-contracts.mjs'
       - 'scripts/test-learning-data-contracts.mjs'
+      - 'scripts/test-learning-backend-boundaries.mjs'
       - 'scripts/verify-learning-shell.mjs'
       - '.github/workflows/learning-verification.yml'
       - 'package.json'
@@ -51,6 +52,8 @@ jobs:
         run: node scripts/verify-learning-data-contracts.mjs
       - name: Execute learner data validation tests
         run: node scripts/test-learning-data-contracts.mjs
+      - name: Verify learner backend adapter boundaries
+        run: node scripts/test-learning-backend-boundaries.mjs
       - name: PostgreSQL learner isolation integration tests
         env:
           PGPASSWORD: test-only-password
