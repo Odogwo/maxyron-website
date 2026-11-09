@@ -45,3 +45,12 @@ Status: DEVELOPMENT BRANCH ONLY. No merge, production deployment, or live learne
 - **Activation blocker**: no scoped preview credentials, exact stable trusted preview origin or configured database URL. Never set the learner backend enabled flag alone or expose credentials in GitHub.
 - Do not register a per-commit random preview hostname as a permanent Neon Auth trusted origin. Prefer a verified stable branch alias or a dedicated development hostname, with an explicit narrow origin allowlist.
 - Next steps: align Node runtime; establish stable development preview; configure secret values only through Vercel secure environment management, preview/branch scoped; add exact origin to Neon Auth; test two real verified users. Production remains unchanged.
+
+## Stage 7A verified Vercel preview — latest read-back
+- Vercel team authorization completed; `maxyron-website` project is accessible through the connected account.
+- READY preview deployment `dpl_H8HHBwExUZ1qqWGdAZvTHNS776dc`, commit `8ba6c0cef4246b66dda31c0487e7556e4a6c8fe8`, deployment URL `https://maxyron-website-31fdnim6q-odogwos-projects.vercel.app`. Preview is SSO protected.
+- GitHub workflows for that commit passed: `MAXYRON Website CI` run `42619241259`, `Learning Website Verification` run `42619241755`.
+- Vercel project and branch-filtered environment listings returned zero variables. No decrypted values retrieved.
+- Neon development Auth config read-back: `trusted_origins=[]`, `allow_localhost=true`, email/password enabled with OTP verification required. No origin modified.
+- Do not add per-commit preview URLs to Neon trusted origins. Require verified stable branch domain or isolated development domain before enabling backend and registering an origin.
+- No project settings, environment secrets, Neon Auth settings, production deployments or domains modified during this read-only audit.
