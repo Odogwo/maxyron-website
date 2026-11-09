@@ -76,3 +76,10 @@ All learner POST operations now require an Origin header exactly matching the re
 - Added source-level readiness checks to Learning Website Verification CI and updated example environment file.
 - No actual hosting secrets or trusted preview origin were supplied through the available connectors. No browser accounts or external emails were created. No login or end-to-end persistence claims.
 - Activation remains blocked until a real development deployment with securely injected secrets and exact trusted origin is available.
+
+## Stage 6I — learner data integrity
+- Implemented uniqueness of one learner note per resource. Concurrent first-write attempts use `ON CONFLICT (user_id,resource_ref) DO NOTHING` and return an explicit note version conflict; subsequent writes require an expected version.
+- Added migration `db/learning/004_note_uniqueness.sql`. Applied unique index to the isolated Neon development branch and read-back verified its definition; production unchanged.
+- Reusing an event idempotency key with different resource, type, occurrence time or payload now raises `event_idempotency_conflict` and maps to HTTP 409 rather than silently accepting a different event.
+- Added `scripts/test-learning-integrity.mjs` to Learning Verification CI. These are static boundary checks; live concurrent request and two-browser-user tests remain required.
+- Stage 6H CI results: Website run `42616980561` passed; Learning Verification run `42616980651` passed.
