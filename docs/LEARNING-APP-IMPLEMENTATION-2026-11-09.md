@@ -43,3 +43,6 @@ Previous commit `02a4f4d` returned successful Vercel and two successful GitHub A
 
 ## Security verification and RLS policy design
 Prior commit `7200ab8` passed Vercel and two GitHub Actions runs. Added draft owner policies `db/learning/002_owner_policies.sql`, source-level checks `scripts/verify-learning-security.mjs`, and `docs/LEARNING-SECURITY-TEST-PLAN.md`. CI now executes the security source checks. These are design/static checks only; no SQL migration, authenticated runtime or integration isolation test has run. New commits require independent CI results.
+
+## Verified database test milestone and next adapter contract
+Commit `9516819` had two successful GitHub Actions workflows; prior PostgreSQL isolation test job `129033554824` also completed successfully. Added `app/learn/data-contracts.ts`, source contract checks, and `docs/LEARNING-PERSISTENCE-ADAPTER-DECISION.md`. These prepare payload limits and provider-neutral types but do not enable authentication or persistence. Latest changes require new CI verification. Provider provisioning and credentials remain pending an isolated MAXYRON development environment.
