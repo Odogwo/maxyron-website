@@ -24,3 +24,6 @@ Added `scripts/test-learning-data-contracts.mjs` to exercise the actual TypeScri
 
 ## Server adapter interfaces
 `app/learn/server/identity.ts` defines verified identity results and a deny-by-default disabled adapter. `app/learn/server/storage.ts` defines typed note/event persistence methods that require a verified learner object, plus an unavailable implementation. `scripts/test-learning-backend-boundaries.mjs` checks source-level invariants in CI. These are not yet wired to real provider sessions or SQL storage. No production identity or database credentials were created or accessed.
+
+## Executable fail-closed adapter checks
+`scripts/test-learning-disabled-adapters.mjs` now executes the disabled identity and storage adapters (rather than only scanning source). It asserts that identity resolution rejects requests even with forged client identity fields and that list/save/event operations reject with the expected unavailable error. The script is included in CI. This verifies default-disabled behavior only, not real session authentication or database persistence. Observe new CI results before claiming these tests passed.
