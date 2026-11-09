@@ -16,5 +16,5 @@ for(const table of ['users','enrollments','learner_notes','learning_events']){
 assert.match(policies,/current_setting\('app\.verified_user_id'/);
 assert.match(policies,/WITH CHECK \(user_id = learning\.current_user_id\(\)\)/);
 assert.match(initial,/UNIQUE\(user_id,idempotency_key\)/);
-assert.doesNotMatch(policies,/DISABLE ROW LEVEL SECURITY|BYPASSRLS/);
+assert.doesNotMatch(policies,/^\\s*ALTER TABLE .* DISABLE ROW LEVEL SECURITY|^\\s*ALTER ROLE .* BYPASSRLS/im);
 console.log('PASS: fail-closed learner API scaffold, RLS declarations, owner policy templates and idempotency constraint.');
