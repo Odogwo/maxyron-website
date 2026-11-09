@@ -56,10 +56,10 @@ export const postgresLearnerStorage:LearnerStorage={
   return inLearnerTransaction(learner,async client=>{
    const r=await client.query('INSERT INTO learning.learning_events(id,user_id,resource_ref,event_type,idempotency_key,occurred_at,payload) VALUES($1,$2,$3,$4,$5,$6,$7) ON CONFLICT (user_id,idempotency_key) DO NOTHING RETURNING id,resource_ref,event_type,occurred_at',[randomUUID(),learner.learnerId,input.resourceRef,input.eventType,input.idempotencyKey,input.occurredAt,JSON.stringify(input.payload)]);
    if(r.rowCount===1) return event(r.rows[0]);
-   const existing=await client.query('SELECT id,resource_ref,event_type,occurred_at,payload FROM learning.learning_events WHERE user_id=$1 AND idempotency_key=$2',[learner.learnerId,input.idempotencyKey]);
+   const existing=await client.query('SELECT id,resource_ref,event_type,occurred_at,(payload=$3::jsonb) AS payload_matches FROM learning.learning_events WHERE user_id=$1 AND idempotency_key=$2',[learner.learnerId,input.idempotencyKey,JSON.stringify(input.payload)]);
    if(existing.rowCount!==1) throw new Error('event_idempotency_failed');
    const prior=existing.rows[0];
-   if(prior.resource_ref!==input.resourceRef||prior.event_type!==input.eventType||new Date(prior.occurred_at).getTime()!==new Date(input.occurredAt).getTime()||JSON.stringify(prior.payload)!==JSON.stringify(input.payload)) throw new Error('event_idempotency_conflict');
+   if(prior.resource_ref!==input.resourceRef||prior.event_type!==input.eventType||new Date(prior.occurred_at).getTime()!==new Date(input.occurredAt).getTime()||prior.payload_matches!==true) throw new Error('event_idempotency_conflict');
    return event(prior);
   });
  }
