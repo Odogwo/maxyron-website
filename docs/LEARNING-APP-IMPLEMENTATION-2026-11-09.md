@@ -46,3 +46,6 @@ Prior commit `7200ab8` passed Vercel and two GitHub Actions runs. Added draft ow
 
 ## Verified database test milestone and next adapter contract
 Commit `9516819` had two successful GitHub Actions workflows; prior PostgreSQL isolation test job `129033554824` also completed successfully. Added `app/learn/data-contracts.ts`, source contract checks, and `docs/LEARNING-PERSISTENCE-ADAPTER-DECISION.md`. These prepare payload limits and provider-neutral types but do not enable authentication or persistence. Latest changes require new CI verification. Provider provisioning and credentials remain pending an isolated MAXYRON development environment.
+
+## Development environment provisioning gate
+Commit `4b0092c` passed two GitHub Actions workflows and Vercel. Added `.env.learning.example`, `scripts/check-learning-environment.mjs`, and `docs/LEARNING-DEVELOPMENT-PROVISIONING-RUNBOOK.md`. CI checks disabled-by-default configuration and rejection of an enabled backend missing required credentials. No identity tenant or database has been provisioned, and no live connection is claimed. Latest changes await CI.
