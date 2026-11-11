@@ -221,3 +221,12 @@ A distinct ChatGPT workspace for MAXYRON Infrastructure & Platform Operations is
 ## 2026-11-11 — Infrastructure shortcut
 
 The /infrastructure route on the corporate website redirects to the owner-private MAXYRON Infrastructure Control Centre. The destination enforces ChatGPT sign-in. The redirect serves an empty response and is excluded from indexing. Operational records remain in the MAXYRON Infrastructure repository. Check the production response and destination access policy after deployment.
+
+
+## 2026-11-11 — Stage 5B homepage UX and accessibility refinement
+
+- **Source changes committed:** homepage hero CTAs now lead to `/services` and `/products`; homepage wordmark links to `/`; keyboard skip link targets `main#main-content`. Shared CSS adds visible keyboard focus and reduced-motion behavior.
+- **Commits:** `2d7a7b205c3478def858d027e36de298ef4fd446`, `be104d4696da878f913b947b4090e39758fdf0d3`.
+- **Design and governance:** preserved original MAXYRON visual identity, four R1 service divisions, diagnostic integration, contact mailto behavior and independent application boundaries.
+- **Detailed audit:** `docs/implementation/WEBSITE-STAGE-5B-HOMEPAGE-REFINEMENT-2026-11-11.md`.
+- **Status:** source implementation completed; fresh GitHub Actions build, Vercel deployment and live desktop/mobile acceptance remain pending. Do not claim the new CTAs are live until checked.
