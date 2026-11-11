@@ -29,10 +29,11 @@ const approach = [
   { step: '04', name: 'Evolve', description: 'Review performance, document what was learned and refine the solution as requirements change.' }
 ];
 export default function Home() {
-  return <main>
+  return <main id="main-content">
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema).replace(/</g, '\\u003c') }} />
+    <a className="skip-link" href="#main-content">Skip to main content</a>
     <header className="site-header"><div className="shell nav">
-      <a className="wordmark" href="#" aria-label="MAXYRON home"><span className="mark">M<span>.</span></span><span>MAXYRON</span></a>
+      <a className="wordmark" href="/" aria-label="MAXYRON home"><span className="mark">M<span>.</span></span><span>MAXYRON</span></a>
       <nav aria-label="Main navigation"><a href="/services">Services</a><a href="/products">Products</a><a href="/learning">Learning</a><a href="/research">Research</a><a href="#about">About</a><a href="/infrastructure">Infrastructure</a><a href="mailto:hello@maxyron.com?subject=MAXYRON%20enquiry">Contact</a></nav>
       <a className="nav-cta" href="mailto:hello@maxyron.com?subject=MAXYRON%20enquiry">Start a conversation <span aria-hidden="true">↗</span></a>
     </div></header>
@@ -40,7 +41,7 @@ export default function Home() {
       <div className="hero-content"><p className="eyebrow"><span className="pulse"/> SYSTEMS THINKING. REAL-WORLD IMPACT.</p>
         <h1>Engineering<br/><em>Intelligent</em><br/>Systems<span className="period">.</span></h1>
         <p className="hero-lede">We research complex problems, design practical systems and build AI-enabled tools that help people and organizations make informed decisions and work more effectively.</p>
-        <div className="hero-actions"><a className="button primary" href="#expertise">Explore our expertise <span>↗</span></a><a className="text-link" href="#about">Discover MAXYRON <span>↗</span></a></div>
+        <div className="hero-actions"><a className="button primary" href="/services">Explore our services <span aria-hidden="true">↗</span></a><a className="text-link" href="/products">Explore our products <span aria-hidden="true">↗</span></a></div>
         <div className="hero-foot"><span>AI ENGINEERING</span><i/> <span>AUTOMATION</span><i/> <span>KNOWLEDGE SYSTEMS</span></div>
       </div>
       <div className="hero-art" aria-hidden="true"><div className="orb orb-a"/><div className="orb orb-b"/><div className="orb orb-c"/><div className="orbit orbit-one"/><div className="orbit orbit-two"/><div className="orb-center"><span>M</span></div><div className="art-caption">DESIGN / BUILD / VERIFY</div></div>
