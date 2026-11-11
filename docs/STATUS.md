@@ -216,3 +216,8 @@ A distinct ChatGPT workspace for MAXYRON Infrastructure & Platform Operations is
 - **Five routes inspected in GitHub:** `/`, `/services`, `/products`, `/learning`, `/research`; sitemap contains all five. Contact mailto destinations present in each page source. No visual design, R1 taxonomy, route or integration permission changed.
 - **Deployment evidence:** pre-repair commit `dda740f903a55279c3c7526ec31fcf0b1bde4a3e` reported Vercel success. No passing independent GitHub Actions run or successful Vercel status for repair commit was established during the audit.
 - **Next gate:** obtain passing CI/build and deployed commit evidence; browser-test all five live routes, mobile navigation, contact action, sitemap and diagnostic return link. Stage 5A is **partially complete**, not production accepted.
+
+
+## 2026-11-11 — Infrastructure shortcut
+
+The /infrastructure route on the corporate website redirects to the owner-private MAXYRON Infrastructure Control Centre. The destination enforces ChatGPT sign-in. The redirect serves an empty response and is excluded from indexing. Operational records remain in the MAXYRON Infrastructure repository. Check the production response and destination access policy after deployment.

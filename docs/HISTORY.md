@@ -38,3 +38,8 @@ Append date, change, why, evidence (commit/deployment/screenshot), verification 
 **Verification:** GitHub commits and read-back succeeded for new/updated source; an independent static cross-check found JSON records consistent with source page labels and approved links. Remote CI and production browsing were not established in this session; the standalone validation command remains a next test. No frontend UI, DNS, hosting or authentication was changed by this documentation/governance implementation.
 
 **Next:** Check remote CI status, verify an additional product's publicly safe landing route and intended audience, implement/verify reciprocal navigation within its owner repo, and only then publish its URL from MAXYRON.
+
+
+## 2026-11-11 — Infrastructure shortcut
+
+The /infrastructure route on the corporate website redirects to the owner-private MAXYRON Infrastructure Control Centre. The destination enforces ChatGPT sign-in. The redirect serves an empty response and is excluded from indexing. Operational records remain in the MAXYRON Infrastructure repository. Check the production response and destination access policy after deployment.
