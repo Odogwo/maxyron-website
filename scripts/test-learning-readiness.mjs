@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+const source=readFileSync('app/learn/server/learning-readiness.ts','utf8');
+const api=readFileSync('app/api/learning/readiness/route.ts','utf8');
+assert.match(source,/LEARNING_DEPLOYMENT_TIER==='development'/);
+assert.match(source,/sslmode/);
+assert.match(source,/verify-full/);
+assert.match(source,/NEON_AUTH_COOKIE_SECRET\.length>=32/);
+assert.match(source,/url\.protocol==='https:'/);
+assert.doesNotMatch(api,/NEON_AUTH_BASE_URL|LEARNING_DATABASE_URL|NEON_AUTH_COOKIE_SECRET/);
+assert.match(api,/Cache-Control':'no-store/);
+console.log('PASS: read-only readiness endpoint and secret-free response boundary');

@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+const storage=readFileSync('app/learn/server/postgres-storage.ts','utf8');
+const migration=readFileSync('db/learning/004_note_uniqueness.sql','utf8');
+assert.match(storage,/ON CONFLICT \(user_id,resource_ref\) DO NOTHING/);
+assert.match(storage,/note_version_conflict/);
+assert.match(storage,/event_idempotency_conflict/);
+assert.match(storage,/learningConfigured\(\)/);
+assert.match(migration,/CREATE UNIQUE INDEX IF NOT EXISTS learner_notes_user_resource_unique/);
+console.log('PASS: note uniqueness and conflicting event retry boundaries');
