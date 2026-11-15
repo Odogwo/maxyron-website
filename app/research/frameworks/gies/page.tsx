@@ -17,22 +17,9 @@ const stages = [
 ];
 
 export default function GiesPage() {
-  return <main className="framework-page" style={{maxWidth:960,margin:'0 auto',padding:'3rem 1.5rem',fontFamily:'inherit',lineHeight:1.7}}>
-    <nav aria-label="Breadcrumb"><Link href="/">Home</Link> / <Link href="/research">Research</Link> / <Link href="/research/frameworks">Frameworks</Link> / GIES</nav>
-    <p style={{marginTop:40,textTransform:'uppercase',letterSpacing:2}}>MAXYRON Original Framework · Education & Human Capability</p>
-    <h1>Global Integrative Education Standard (GIES)</h1>
-    <p><strong>Research status:</strong> Incubating candidate framework; not empirically validated or an adopted international standard.</p>
-    <p>GIES investigates education as the demonstrated ability to understand, apply, communicate and adapt knowledge across contexts. It distinguishes schooling and credentials from broader educational capability while recognising the value of local and situated knowledge.</p>
-    <h2>Core research questions</h2>
-    <p>What does it mean to be educated? Which capabilities can be assessed fairly across contexts? How should performance, self-perception and contextual evidence be combined without reducing human worth to a score?</p>
-    <h2>Development history</h2>
-    <ol>{stages.map(([title,detail])=><li key={title}><strong>{title}:</strong> {detail}</li>)}</ol>
-    <h2>Proposed assessment architecture</h2>
-    <p>Current hypotheses cover foundational literacies, cognitive transfer, communication and applied knowledge. A proposed multi-method design uses self-report, practical tasks and contextual observations. Domains, weighting, cut scores and cross-cultural comparability require empirical testing.</p>
-    <h2>Evidence and limitations</h2>
-    <p>Previously discussed pilot figures were illustrative simulations, not observed participant results. No reliability, factor structure, predictive validity or global comparability claims should be inferred from them. Any future assessment product must be separately validated.</p>
-    <h2>Relationship to MAXYRON</h2>
-    <p>This page is the public intellectual overview. Bespoke educational audits would belong under Services; reusable assessment software under Products; capability-development programmes under Learning. None is asserted to be available solely because this framework exists.</p>
-    <p><Link href="/research/frameworks">← Browse all frameworks</Link></p>
+  return <main className="framework-page">
+    <div className="framework-shell"><nav className="framework-breadcrumb" aria-label="Breadcrumb"><Link href="/">Home</Link> / <Link href="/research">Research</Link> / <Link href="/research/frameworks">Frameworks</Link> / GIES</nav></div>
+    <header className="framework-hero"><div className="framework-shell"><p className="framework-eyebrow">Original Framework / Education &amp; Human Capability</p><h1>Global Integrative Education Standard (GIES)</h1><p className="framework-lead">Investigating education as the ability to understand, apply, communicate and adapt knowledge across contexts—not simply as credentials or years of schooling.</p><span className="framework-status">Incubating candidate · Not empirically validated</span></div></header>
+    <div className="framework-shell framework-content"><div className="framework-sections"><section className="framework-panel"><h2>Core research questions</h2><p>What does it mean to be educated? Which capabilities can be assessed fairly across contexts? How can performance, self-perception and contextual evidence be combined without reducing human worth to a score?</p></section><section className="framework-panel"><h2>Proposed assessment</h2><p>Current hypotheses concern foundational literacies, cognitive transfer, communication and applied knowledge. A proposed multi-method design combines self-report, practical tasks and contextual observation. Domains, weights and cut scores require testing.</p></section><section className="framework-panel framework-wide"><h2>Development history</h2><ol className="framework-timeline">{stages.map(([title,detail])=><li key={title}><strong>{title}:</strong> {detail}</li>)}</ol></section><section className="framework-panel"><h2>Evidence and limitations</h2><p>Previously discussed pilot figures were illustrative simulations, not observed participant results. Reliability, factor structure, predictive validity and cross-cultural comparability remain unestablished. Any future assessment product requires separate validation.</p></section><section className="framework-panel"><h2>Relationship to MAXYRON</h2><p>This is a public intellectual overview. Bespoke educational audits belong under Services; reusable assessment software under Products; and capability-development programmes under Learning. None is asserted to be available merely because the framework exists.</p></section></div><p style={{marginTop:32}}><Link className="framework-back" href="/research/frameworks">← Browse all frameworks</Link></p></div>
   </main>;
 }
