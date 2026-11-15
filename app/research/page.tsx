@@ -66,7 +66,7 @@ export default function ResearchPage() {
       <p>As MAXYRON develops its publication catalogue, material should have an identifiable owner, source basis, version, corrections history and appropriate review. Related insights should improve a canonical article rather than create unnecessary duplicates.</p></div>
     </section>
 
-    <section className="research-pathways"><div className="shell research-pathway-grid">
+    <section className="shell research-intro" aria-labelledby="intellectual-works-heading"><div><p className="eyebrow muted">ORIGINAL INTELLECTUAL WORKS</p><h2 id="intellectual-works-heading">Frameworks & Models</h2></div><div><p>Explore original conceptual frameworks and developing methodologies, with their evolution, evidence status and limitations clearly documented.</p><a className="text-link dark-link" href="/research/frameworks">Explore Original Frameworks & Models →</a></div></section>\n\n    <section className="research-pathways"><div className="shell research-pathway-grid">
       <article><span className="eyebrow">CLIENT RESEARCH</span><h3>Need research or advice for a decision?</h3><p>Explore scoped research, evidence analysis, methods support and advisory services.</p><a className="text-link" href="/services#research-advisory">Explore Research & Advisory <span aria-hidden="true">↗</span></a></article>
       <article><span className="eyebrow">REUSABLE TOOLS</span><h3>Looking for research applications?</h3><p>Discover research and knowledge systems in the MAXYRON product-development portfolio.</p><a className="text-link" href="/products">Explore Products <span aria-hidden="true">↗</span></a></article>
     </div></section>
