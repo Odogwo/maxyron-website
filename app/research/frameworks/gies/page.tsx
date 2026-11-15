@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import '../../research.css';
 
 export const metadata: Metadata = {
   title: 'GIES — Global Integrative Education Standard | MAXYRON',
@@ -16,7 +17,7 @@ const stages = [
 ];
 
 export default function GiesPage() {
-  return <main style={{maxWidth:960,margin:'0 auto',padding:'3rem 1.5rem',fontFamily:'inherit',lineHeight:1.7}}>
+  return <main className="framework-page" style={{maxWidth:960,margin:'0 auto',padding:'3rem 1.5rem',fontFamily:'inherit',lineHeight:1.7}}>
     <nav aria-label="Breadcrumb"><Link href="/">Home</Link> / <Link href="/research">Research</Link> / <Link href="/research/frameworks">Frameworks</Link> / GIES</nav>
     <p style={{marginTop:40,textTransform:'uppercase',letterSpacing:2}}>MAXYRON Original Framework · Education & Human Capability</p>
     <h1>Global Integrative Education Standard (GIES)</h1>
