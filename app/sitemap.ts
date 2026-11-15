@@ -8,6 +8,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/products`, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${base}/learning`, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${base}/spiritual-consciousness`, changeFrequency: 'monthly', priority: 0.5 },
+    { url: `${base}/research/frameworks`, changeFrequency: 'monthly', priority: 0.5 },
+    { url: `${base}/research/frameworks/gies`, changeFrequency: 'monthly', priority: 0.4 },
     { url: `${base}/research`, changeFrequency: 'monthly', priority: 0.6 },
   ];
 }
