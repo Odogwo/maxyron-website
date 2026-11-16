@@ -12,7 +12,7 @@ Status: source integration on the existing feature/learning-shell-r1 branch; no 
 
 ## Test procedure
 1. Checkout feature/learning-shell-r1 into a separate directory, preserving any existing corporate checkout/branch.
-2. Verify 127.0.0.1:3010 unoccupied, then install package dependencies based on trusted package-lock; start with npm run dev -- --hostname 127.0.0.1 --port 3010.
+2. Verify 127.0.0.1:3010 unoccupied, then review dependency versions and install project dependencies; this branch has no committed package-lock.json, so npm ci is not available; start with npm run dev -- --hostname 127.0.0.1 --port 3010.
 3. Keep MAXYRON Learning development server running on 127.0.0.1:3005. Visit http://127.0.0.1:3010/learning.
 4. Verify both CTAs point to the Learning server and /learn/journal shows sign-in-required or an authorized user's private journal as appropriate.
 5. Test production mode behavior WITHOUT enabling the release flag before allowing any public deployment. Protect all auth secrets and preserve local unsaved changes.
