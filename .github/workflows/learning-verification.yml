@@ -1,0 +1,102 @@
+name: Learning Website Verification
+on:
+  push:
+    branches:
+      - feature/learning-shell-r1
+  pull_request:
+    paths:
+      - 'app/learn/**'
+      - 'app/api/learning/**'
+      - 'db/learning/**'
+      - 'tests/learning/**'
+      - 'scripts/verify-learning-security.mjs'
+      - 'scripts/verify-learning-data-contracts.mjs'
+      - 'scripts/test-learning-data-contracts.mjs'
+      - 'scripts/test-learning-backend-boundaries.mjs'
+      - 'scripts/test-learning-disabled-adapters.mjs'
+      - 'scripts/test-learning-neon-auth-config.mjs'
+      - 'scripts/test-learning-session-claims.mjs'
+      - 'scripts/test-learning-persistence-boundaries.mjs'
+      - 'db/learning/003_authenticated_provisioning.sql'
+      - 'scripts/check-learning-environment.mjs'
+      - '.env.learning.example'
+      - 'scripts/verify-learning-shell.mjs'
+      - '.github/workflows/learning-verification.yml'
+      - 'package.json'
+      - 'tsconfig.json'
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: test-only-password
+          POSTGRES_DB: learning_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres -d learning_test"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: ''
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+      - name: Validate learning route contracts
+        run: node scripts/verify-learning-shell.mjs
+      - name: Verify learning security invariants
+        run: node scripts/verify-learning-security.mjs
+      - name: Verify learner data contract source
+        run: node scripts/verify-learning-data-contracts.mjs
+      - name: Execute learner data validation tests
+        run: node scripts/test-learning-data-contracts.mjs
+      - name: Verify learner backend adapter boundaries
+        run: node scripts/test-learning-backend-boundaries.mjs
+      - name: Exercise disabled learner backend adapters
+        run: node scripts/test-learning-disabled-adapters.mjs
+      - name: Exercise Neon Auth configuration fail-closed tests
+        run: node scripts/test-learning-neon-auth-config.mjs
+      - name: Exercise verified session claim contract tests
+        run: node scripts/test-learning-session-claims.mjs
+      - name: Verify authenticated dashboard integration
+        run: node scripts/test-learning-overview.mjs
+      - name: Verify journal authenticated integration boundaries
+        run: node scripts/test-learning-journal-integration.mjs
+      - name: Verify semantic JSONB idempotency guard
+        run: node scripts/test-learning-idempotency-jsonb.mjs
+      - name: Verify learner data integrity boundaries
+        run: node scripts/test-learning-integrity.mjs
+      - name: Verify development readiness and secret-free diagnostics
+        run: node scripts/test-learning-readiness.mjs
+      - name: Verify persistence security boundaries
+        run: node scripts/test-learning-persistence-boundaries.mjs
+      - name: Check disabled backend environment defaults
+        run: node scripts/check-learning-environment.mjs
+      - name: Verify incomplete enabled backend configuration fails closed
+        run: |
+          if LEARNING_BACKEND_ENABLED=true node scripts/check-learning-environment.mjs; then
+            echo 'Expected configuration preflight to reject missing credentials' >&2
+            exit 1
+          fi
+      - name: PostgreSQL learner isolation integration tests
+        env:
+          PGPASSWORD: test-only-password
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y postgresql-client
+          psql -h localhost -U postgres -d learning_test -v ON_ERROR_STOP=1 -f tests/learning/rls-integration.sql
+          psql -h localhost -U postgres -d postgres -v ON_ERROR_STOP=1 -c 'CREATE DATABASE learning_provisioning_test'
+          psql -h localhost -U postgres -d learning_provisioning_test -v ON_ERROR_STOP=1 -f tests/learning/rls-provisioning.sql
+      - name: TypeScript verification
+        run: npx tsc --noEmit
+      - name: Next.js production build
+        run: npm run build

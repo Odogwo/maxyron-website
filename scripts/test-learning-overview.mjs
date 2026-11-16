@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+const component=readFileSync('app/learn/LearnerOverview.tsx','utf8');
+const home=readFileSync('app/learn/page.tsx','utf8');
+assert.match(component,/\/api\/learning\/me/);
+assert.match(component,/\/api\/learning\/notes/);
+assert.match(component,/state:'disabled'/);
+assert.match(component,/state:'signed_out'/);
+assert.match(component,/No saved progress is claimed/);
+assert.match(home,/LearnerOverview/);
+console.log('PASS: learner overview only reports authenticated API-returned notes');

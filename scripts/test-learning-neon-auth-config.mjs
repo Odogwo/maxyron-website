@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {createRequire} from 'node:module';
+import {runInNewContext} from 'node:vm';
+const require=createRequire(import.meta.url);
+const ts=require('typescript');
+const source=readFileSync('app/learn/server/neon-auth-config.ts','utf8');
+const code=ts.transpileModule(source,{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText;
+const exports={};
+runInNewContext(code,{exports,URL});
+const parse=exports.readNeonAuthConfiguration;
+const issuer='https://example.neonauth.neon.tech/neondb/auth';
+const good={LEARNING_BACKEND_ENABLED:'true',LEARNING_AUTH_ISSUER:issuer,LEARNING_AUTH_JWKS_URL:issuer+'/.well-known/jwks.json',LEARNING_AUTH_AUDIENCE:'maxyron-learning'};
+assert.equal(parse(good).issuer,issuer);
+for(const bad of [{...good,LEARNING_BACKEND_ENABLED:'false'},{...good,LEARNING_AUTH_AUDIENCE:''},{...good,LEARNING_AUTH_ISSUER:'http://example.neonauth.neon.tech/neondb/auth'},{...good,LEARNING_AUTH_JWKS_URL:'https://evil.example/.well-known/jwks.json'},{...good,LEARNING_AUTH_JWKS_URL:'https://example.neonauth.neon.tech/other/.well-known/jwks.json'}])assert.equal(parse(bad),null,'invalid auth config must be rejected');
+console.log('PASS: Neon Auth server config fails closed for invalid settings.');

@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+const identity=readFileSync('app/learn/server/identity.ts','utf8');
+const storage=readFileSync('app/learn/server/storage.ts','utf8');
+assert.match(identity,/authenticated:false,reason:'not_configured'/);
+assert.match(identity,/resolve\(request:Request\)/);
+assert.doesNotMatch(identity,/headers\.get\(['"]x-user-id|request\.json\(/i);
+for(const method of ['listNotes','saveNote','recordEvent'])assert.match(storage,new RegExp(method+'\\('));
+assert.match(storage,/LearnerStorageUnavailableError/);
+assert.match(storage,/VerifiedLearner/);
+console.log('PASS: provider-neutral backend interface invariants (not runtime integration).');
