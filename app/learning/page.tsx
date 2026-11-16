@@ -17,6 +17,13 @@ const domains = [
 ];
 
 export default function LearningPage() {
+  // Production links stay absent until a separate, deliberate release gate is enabled.
+  const localPreview = process.env.NODE_ENV !== 'production';
+  const publicEnabled = process.env.MAXYRON_LEARNING_PUBLIC_LINKS_ENABLED === 'true';
+  const origin = localPreview ? 'http://127.0.0.1:3005'
+    : publicEnabled ? 'https://learn.maxyron.com' : null;
+  const workspaceHref = origin ? origin + '/learn' : null;
+  const journalHref = origin ? origin + '/learn/journal' : null;
   return <main>
     <header className="site-header"><div className="shell nav">
       <a className="wordmark" href="/" aria-label="MAXYRON home"><span className="mark">M<span>.</span></span><span>MAXYRON</span></a>
@@ -28,6 +35,16 @@ export default function LearningPage() {
       <h1>Knowledge that<br/><em>becomes capability.</em></h1>
       <p>MAXYRON explores learning systems that connect understanding, deliberate practice and evidence of independent performance. This page introduces developing and proposed learning areas, rather than an enrolment catalogue or accredited school.</p>
     </div></section>
+    <section className="shell" aria-label="MAXYRON Learning workspace" style={{paddingTop:"2.5rem",paddingBottom:"2.5rem"}}>
+      <p className="eyebrow muted">SEPARATE LEARNING APPLICATION</p>
+      <h2>Learning workspace and private journal</h2>
+      <p>Explore the developing learning workspace and, with an authorized learner account, access your private learning journal. The journal remains in the independent MAXYRON Learning application.</p>
+      {workspaceHref && journalHref ? <div className="learning-integration-actions">
+        <a href={workspaceHref} rel="noopener noreferrer" className="learning-integration-link">Open Learning Workspace</a>
+        <a href={journalHref} rel="noopener noreferrer" className="learning-integration-link learning-integration-secondary">Private Learning Journal</a>
+      </div> : <p className="learning-integration-pending" role="status">The Learning application is in development. Public access will be enabled after testing and release approval.</p>}
+      {localPreview ? <p className="learning-integration-pending">Local development preview only — these links open the Learning server on this computer.</p> : null}
+    </section>
     <section className="shell" aria-label="Spiritual Consciousness programme" style={{paddingTop:"2rem",paddingBottom:"2rem"}}><h2>Spiritual Consciousness</h2><p>Explore the developing MAXYRON programme connecting Bible knowledge, Scripture memory and disciplined spiritual reflection.</p><a href="/spiritual-consciousness">Explore Spiritual Consciousness</a></section>
     <section className="shell learning-principles" aria-labelledby="learning-principles-title">
       <div><p className="eyebrow muted">OUR EDUCATIONAL VIEW</p><h2 id="learning-principles-title">Learning is a process.<br/>Mastery must be demonstrated.</h2></div>
