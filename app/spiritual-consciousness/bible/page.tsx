@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { spiritualSourceStatus } from '../../../lib/spiritual-consciousness/source-status';
+import BibleBookExplorer from './book-explorer';
 
 export const metadata: Metadata = {
   title: 'Bible Knowledge | Spiritual Consciousness | MAXYRON',
@@ -31,6 +32,7 @@ export default function BiblePage() {
         <span style={{ color: '#667875', fontSize: 13 }}>Source integration pending validation</span>
       </article>)}
     </section>
+    <BibleBookExplorer />
     <aside aria-label="Knowledge source integration status" style={{ marginTop: 38, padding: 24, background: "#edf2ed", borderRadius: 12 }}><h2 style={{ marginTop: 0 }}>Source integration status</h2><p>{source.summary}</p><ul>{source.metrics.map(item => <li key={item.label}>{item.label}: {item.value}</li>)}</ul><p style={{ fontSize: 13 }}>Verified metadata: {source.verifiedAt}. Content publication not approved; no private source records are loaded.</p></aside>
     <p style={{ marginTop: 38 }}>Explore the related <Link href="/spiritual-consciousness/sons-of-god" style={{ textDecoration: 'underline' }}>Sons of God</Link> experience.</p>
   </main>;
