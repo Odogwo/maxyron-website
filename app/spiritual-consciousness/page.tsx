@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Spiritual Consciousness | MAXYRON',
@@ -7,8 +8,9 @@ export const metadata: Metadata = {
 };
 
 const domains = [
-  { title: 'Bible Knowledge', description: 'Contextual study, concepts, principles, mechanisms and structures grounded in preserved sources.' },
+  { title: 'Bible Knowledge', href: '/spiritual-consciousness/bible', description: 'Contextual study, concepts, principles, mechanisms and structures grounded in preserved sources.' },
   { title: 'Scripture Memory', description: 'Book and number memory cues, retrieval practice and careful distinction between recall and understanding.' },
+  { title: 'Sons of God', href: '/spiritual-consciousness/sons-of-god', description: 'A dedicated developing Christian identity, teaching, learning and fellowship experience.' },
   { title: 'Spiritual Inquiry', description: 'Developing essays and structured reflection across Scripture, philosophy, spiritual experience and practical life.' },
   { title: 'Learning and Verification', description: 'Source-based learning prompts, interpretive boundaries and evidence-led assessment design.' },
 ];
@@ -24,7 +26,7 @@ export default function SpiritualConsciousnessPage() {
     </header>
     <section aria-labelledby="domains"><h2 id="domains">Areas of development</h2>
       <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(230px,1fr))',gap:'1.5rem'}}>
-        {domains.map(domain=><article key={domain.title} style={{border:'1px solid #8886',borderRadius:12,padding:'1.25rem'}}><h3>{domain.title}</h3><p>{domain.description}</p></article>)}
+        {domains.map(domain=><article key={domain.title} style={{border:'1px solid #8886',borderRadius:12,padding:'1.25rem'}}><h3>{domain.title}</h3><p>{domain.description}</p>{'href' in domain && domain.href ? <p><Link href={domain.href}>Open dedicated experience →</Link></p> : <p>Further development planned</p>}</article>)}
       </div>
     </section>
     <section style={{marginTop:'3rem'}} aria-labelledby="method"><h2 id="method">Method and boundaries</h2>
