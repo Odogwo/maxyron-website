@@ -26,3 +26,17 @@ test('domain pages are noindex until approval', () => {
     assert.match(read(page), /follow: false/);
   }
 });
+
+test('Bible explorer preserves the 66 book coordinates without fabricated verse records', () => {
+  const registry = read('lib/spiritual-consciousness/bible-book-registry.ts');
+  const entries = [...registry.matchAll(/"id": "(\\d{3})",/g)].map(m => m[1]);
+  assert.equal(entries.length, 66);
+  assert.equal(new Set(entries).size, 66);
+  assert.equal(entries[0], '101');
+  assert.equal(entries.at(-1), '227');
+  assert.ok(registry.includes('"id": "204"'));
+  const explorer = read('app/spiritual-consciousness/bible/book-explorer.tsx');
+  assert.match(explorer, /bibleBooks\.filter/);
+  assert.match(explorer, /aria-live="polite"/);
+  assert.match(read('app/spiritual-consciousness/bible/page.tsx'), /<BibleBookExplorer \/>/);
+});
