@@ -58,3 +58,7 @@ Each new strategy version v3/v4 must be compared to the CURRENT reconciled autho
 **Identity rule:** MAXYRON is an intelligent systems engineering and research **organization**, not a general-purpose content website or an academy by default. Its public four services remain AI Engineering, Intelligent Automation, Knowledge Architecture, and Research & Advisory. The four cross-cutting organizational functions (Services, Products, Learning & Mastery, Knowledge & Research) are not the same as the four service offerings.
 
 **Governance:** A recorded recommendation is not a published product, approved rebrand, deployment or verified integration. Check source, live behavior and the portfolio registry before any public claim.
+
+## MAPSA commercial programme — 2026-11-27
+
+MAXYRON AI Products, Services and Business Agents (MAPSA) coordinates candidate commercial offerings under the existing MAXYRON AI authority. Products and services retain R1 classification; agents may be products or service deliverables. The programme is in private development; no new public offering, pricing, deployment or navigation change is asserted. Future independent applications follow the existing integration standard. R1 remains current.
